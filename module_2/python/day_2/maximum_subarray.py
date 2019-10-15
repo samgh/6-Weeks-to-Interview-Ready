@@ -1,5 +1,5 @@
 """
-Title: Max sum subarray
+Title: Maximum Sum Subarray
 
 Problem:
     Given an integer array nums, find the contiguous subarray (containing at
@@ -11,7 +11,7 @@ import unittest
 from typing import List
 
 
-def max_sum_subarray(nums: List[int]):
+def maximum_subarray(nums: List[int]):
     """Function for calculating max sum in subarray. 
     Brute force solution that takes O(n^2) time."""
     max_val = float("-inf")
@@ -26,12 +26,12 @@ def max_sum_subarray(nums: List[int]):
     return max_val
 
 
-class TestMaxSumSubarray(unittest.TestCase):
-    """Unit test for max_sum_subarray."""
+class TestMaximumSubarray(unittest.TestCase):
+    """Unit test for maximum_subarray."""
 
     def test_1(self):
         test_input_1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-        self.assertEqual(max_sum_subarray(test_input_1), 6)
+        self.assertEqual(maximum_subarray(test_input_1), 6)
         print("Explanation: [4,-1,2,1] has the largest sum = 6.")
 
 
