@@ -1,9 +1,9 @@
 /*
- *   Title: 
+ *   Title: Merge intevals
  *
- *   Problem:
+ *   Problem: Given a collection of intervals, merge all overlapping intervals.
  *
- *   Execution: javac XX && java XX
+ *   Execution: javac MergeIntervals.java && java MergeIntervals
  */
 import java.util.*;
 import java.util.Arrays;
