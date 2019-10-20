@@ -39,7 +39,7 @@ class LRUCache():
             self._cache.popitem(last=False)
 
 
-class TestXXX(unittest.TestCase):
+class TestLRUCache(unittest.TestCase):
     """Unit test for LRU cache."""
 
     def test_1(self):
