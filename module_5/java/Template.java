@@ -5,6 +5,7 @@
  *
  *   Execution: javac XX && java XX
  */
+import java.util.*;
 
 
 public class Template {
