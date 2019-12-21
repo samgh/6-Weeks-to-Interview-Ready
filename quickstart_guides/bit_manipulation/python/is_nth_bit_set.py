@@ -1,7 +1,7 @@
 """
 Title: Is n^th bit set.
 
-Problem: 
+Problem:
     Write a program that takes an integer and tests whether
     the n-th bit in the binary representation of that integer
     is set of not.
