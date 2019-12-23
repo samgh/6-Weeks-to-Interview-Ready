@@ -14,7 +14,7 @@ def sort_string(s: str) -> str:
     return ''.join(sorted(s))
 
 
-class TestIsAnagram(unittest.TestCase):
+class TestSortString(unittest.TestCase):
     """Unit test for sort_string."""
 
     def test_1(self):
