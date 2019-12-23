@@ -3,7 +3,7 @@
  *
  *   Given a string, find the length of the longest substring without repeating characters.
  *
- *   Execution: javac LengthOfLongestSubstring && java LengthOfLongestSubstring
+ *   Execution: javac LengthOfLongestSubstring.java && java LengthOfLongestSubstring
  */
 
 import java.util.HashMap;
