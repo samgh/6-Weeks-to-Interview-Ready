@@ -5,7 +5,7 @@
  *   Given a string of lowercase characters from ‘a’ – ‘z’. We need to write a
  *   program to print the characters of this string in sorted order.
  *
- *   Execution: javac SortString java && java SortString
+ *   Execution: javac SortString.java && java SortString
  */
 
 import java.util.Arrays;
