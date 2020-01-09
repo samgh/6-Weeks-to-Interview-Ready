@@ -28,7 +28,7 @@ public class SerializeBinaryTree {
 
     public static class Codec {
         private static final char delimeter = ' ';
-        private static final String nullStr = "null";
+        private static final String nullStr = "N";
 
         // Encodes a tree to a single string.
         public static String serialize(TreeNode root) {
@@ -88,7 +88,13 @@ public class SerializeBinaryTree {
         tree.right.left = new TreeNode(4);
         tree.right.right = new TreeNode(5);
         
-        System.out.println(codec.serialize(tree));
+        String serialized = codec.serialize(tree);
+        System.out.println(serialized);
+        
+        TreeNode newTree = codec.deserialize(serialized);
+        System.out.println(newTree.val);
+        System.out.println(newTree.left.val);
+        System.out.println(newTree.right.val);
 
         System.out.println("Passed all test cases");
     }

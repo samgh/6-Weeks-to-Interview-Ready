@@ -1,13 +1,15 @@
 /*
- *   Title: Remove invlaid parenthesis
+ *   Title: Remove invalid parenthesis
  *
  *   Problem:
-     Remove the minimum number of invalid parentheses in order to make the input string valid. Return all possible results.
-
-    Note: The input string may contain letters other than the parentheses ( and ).
+ *   Remove the minimum number of invalid parentheses in order to make the input
+ *   string valid. Return all possible results.
+ *
+ *   Note: The input string may contain letters other than the parentheses ( and ).
  *
  *   Execution: javac InvalidParentheses.java && java InvalidParentheses
  */
+
 import java.util.*;
 
 
@@ -47,7 +49,7 @@ public class InvalidParentheses {
         HashSet<String> visit = new HashSet<String>(); 
       
         // queue to maintain BFS 
-        Queue<String> q = new LinkedList<>(); 
+        Queue<String> q = new LinkedList<String>(); 
         String temp; 
         boolean level = false; 
       
