@@ -7,8 +7,8 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/set_nth_bit.py
 
 Determine whether a number is a power of 2 (Leetcode)
-Java: 
-Python: 
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/PowerOfTwo.java
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/PowerOfTwo.py
 
 Determine whether a number is a power of 4 (Leetcode)
 Java: 
