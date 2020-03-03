@@ -19,8 +19,8 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/reverse_unsigned.py
 
 Count the number of 1 bits in a number (Leetcode)
-Java: 
-Python: 
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/HammingWeight.java
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/hamming_weight.py
 
 Find the Hamming Distance between two numbers (Leetcode)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/HammingDistance.java
