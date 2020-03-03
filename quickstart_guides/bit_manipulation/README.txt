@@ -8,15 +8,15 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 Determine whether a number is a power of 2 (Leetcode)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/PowerOfTwo.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/PowerOfTwo.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/power_of_two.py
 
 Determine whether a number is a power of 4 (Leetcode)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/PowerOfFour.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/PowerOfFour.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/power_of_four.py
 
 Reverse the bits of an unsigned integer (Leetcode)
-Java: 
-Python: 
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/ReverseUnsigned.java
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/reverse_unsigned.py
 
 Count the number of 1 bits in a number (Leetcode)
 Java: 
