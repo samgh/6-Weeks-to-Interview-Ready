@@ -27,8 +27,8 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/hamming_distance.py
 
 Sum 2 Numbers (Leetcode)
-Java: 
-Python: 
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/SumTwoInts.java
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/python/sum_two_ints.py
 
 Missing number (Leetcode)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/bit_manipulation/java/MissingNumber.java
