@@ -48,11 +48,11 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 Implement binary search (Wikipedia)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/binary_search.py
 
 Implement mergesort (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/merge_sort.py
 
 Find all unique binary search trees (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
