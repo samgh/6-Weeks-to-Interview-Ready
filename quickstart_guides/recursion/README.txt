@@ -44,7 +44,7 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 Find all N-digit numbers whose digits sum up to a target (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/n_digit_sum.py
 
 Implement binary search (Wikipedia)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
@@ -56,4 +56,4 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 Find all unique binary search trees (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/unique_bst.py
