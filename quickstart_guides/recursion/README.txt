@@ -36,7 +36,7 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 Find all permutations of a set of inputs (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/perms_of_set.py
 
 Find all permutations when the input includes duplicates (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
