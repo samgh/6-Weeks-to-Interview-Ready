@@ -41,18 +41,18 @@ class TestDistinctPerms(unittest.TestCase):
     """Unit tests for distinct_perms."""
 
     def test_1(self):
-        expected_res = ['abca',
-                        'abac',
-                        'acba',
-                        'acab',
-                        'aacb',
-                        'aabc',
-                        'baca',
-                        'baac',
-                        'bcaa',
-                        'cbaa',
-                        'caba',
-                        'caab']
+        expected_res = ["abca",
+                        "abac",
+                        "acba",
+                        "acab",
+                        "aacb",
+                        "aabc",
+                        "baca",
+                        "baac",
+                        "bcaa",
+                        "cbaa",
+                        "caba",
+                        "caab"]
         input_str = list("abca")
         n = len(input_str)
         perms = []
