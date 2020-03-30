@@ -71,12 +71,12 @@ public class SlidingPuzzle {
         assert slidingPuzzle(board_2) == -1;
         System.out.println("Explanation: No number of moves will make the baord solved.");
 
-        int[][] board_3 = {{1, 2, 3}, {5, 0, 3} };
+        int[][] board_3 = {{4, 1, 2}, {5, 0, 3} };
         assert slidingPuzzle(board_3) == 5;
-        System.out.println("Explanation: 5 is the smallest number of moves that solves the board..");
+        System.out.println("Explanation: 5 is the smallest number of moves that solves the board.");
 
         int[][] board_4 = {{3, 2, 4}, {1, 5, 0} };
-        assert slidingPuzzle(board_3) == 14;
+        assert slidingPuzzle(board_4) == 14;
 
         System.out.println("Passed all test cases");
     }
