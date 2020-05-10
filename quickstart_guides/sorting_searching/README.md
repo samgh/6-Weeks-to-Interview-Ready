@@ -18,7 +18,7 @@ Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 ## Implement Mergesort on an array
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
+Python: [merge_sort.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/merge_sort.py)
 
 ## Implement Quicksort on an array
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
