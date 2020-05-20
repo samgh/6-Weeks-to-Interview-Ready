@@ -50,7 +50,7 @@ public class IsBipartite {
         assert isBipartite(arr1) == true;
 
         int[][] arr2 = { {1, 2, 3}, { 0, 2 }, {0, 1, 3}, {0, 2} };
-        assert isBipartite(arr2) == true;
+        assert isBipartite(arr2) == false;
 
         System.out.println("Passed all test cases");
     }
