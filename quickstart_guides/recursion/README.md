@@ -14,7 +14,7 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 ## Towers of Hanoi (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/TowerOfHanoi.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/tower_of_hanoi.py
 
 ## Is a string a palindrome? (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/IsPalindrome.java
