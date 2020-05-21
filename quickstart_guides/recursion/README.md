@@ -6,7 +6,7 @@ Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quicksta
 
 ## Print a linked list in reverse order (Byte by Byte)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/ReverseList.java
-Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/XX.py
+Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/reverse_list.py
 
 ## Find all substrings of a string (Geeks for Geeks)
 Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
