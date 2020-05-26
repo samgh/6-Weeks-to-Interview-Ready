@@ -57,5 +57,5 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/merge_sort.py
 
 ## Find all unique binary search trees (Geeks for Geeks)
-Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/UniqueBST.java
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/unique_bst.py
