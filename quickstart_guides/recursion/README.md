@@ -33,7 +33,7 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/knapsack.py
 
 ## Find all ways to interleave 2 strings (Geeks for Geeks)
-Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/InterleavingStrings.java
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/interleaving_strings.py
 
 ## Find all permutations of a set of inputs (Geeks for Geeks)
