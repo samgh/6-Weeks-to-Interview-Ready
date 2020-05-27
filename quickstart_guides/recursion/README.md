@@ -49,7 +49,7 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/n_digit_sum.py
 
 ## Implement binary search (Wikipedia)
-Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/BinarySearch.java
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/binary_search.py
 
 ## Implement mergesort (Geeks for Geeks)
