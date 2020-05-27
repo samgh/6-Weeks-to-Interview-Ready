@@ -41,7 +41,7 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/perms_of_set.py
 
 ## Find all permutations when the input includes duplicates (Geeks for Geeks)
-Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/DistinctPerms.java
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/distinct_perms.py
 
 ## Find all N-digit numbers whose digits sum up to a target (Geeks for Geeks)

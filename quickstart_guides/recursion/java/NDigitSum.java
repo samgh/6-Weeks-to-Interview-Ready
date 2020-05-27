@@ -7,7 +7,7 @@
     This function considers leading 0's  also as digits, that is why not
     directly called.
 
- *   Execution: javac BinarySearch.java && java BinarySearch
+ *   Execution: javac NDigitSum.java && java NDigitSum
  */
 import java.util.Arrays;
 
