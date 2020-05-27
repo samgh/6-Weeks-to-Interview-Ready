@@ -25,7 +25,7 @@ Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/climb_stairs.py
 
 ## Find all combinations of a set of inputs (Geeks for Geeks)
-Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/XX.java
+Java: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/java/FindCombos.java
 Python: https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/recursion/python/find_combos.py
 
 ## 0-1 Knapsack (Byte by Byte)

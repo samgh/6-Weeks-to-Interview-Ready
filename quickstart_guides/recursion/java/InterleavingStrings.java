@@ -12,50 +12,51 @@ import java.util.Arrays;
 
 public class InterleavingStrings {
 
-    /* arr[]  ---> Input Array
-    data[] ---> Temporary array to store current combination
-    start & end ---> Staring and Ending indexes in arr[]
-    index  ---> Current index in data[]
-    r ---> Size of a combination to be printed */
-    static void combinationUtil(int arr[], int data[], int start,
-                                int end, int index, int r)
+    // Returns true if C is an interleaving
+    // of A and B, otherwise returns false
+    static boolean isInterleaved (String A, String B, String C)
     {
-        // Current combination is ready to be printed, print it
-        if (index == r)
+        int i = 0, j = 0, k = 0;
+
+        // Iterate through all characters of C.
+        while (k != C.length())
         {
-            for (int j=0; j<r; j++)
-                System.out.print(data[j]+" ");
-            System.out.println("");
-            return;
+            // Match first character of C with first character
+            // of A. If matches them move A to next
+            if (i<A.length()&&A.charAt(i) == C.charAt(k))
+                i++;
+
+            // Else Match first character of C with first
+            // character of B. If matches them move B to next
+            else if (j<B.length()&&B.charAt(j) == C.charAt(k))
+                j++;
+
+            // If doesn't match with either A or B, then return
+            // false
+            else
+                return false;
+
+            // Move C to next for next iteration
+            k++;
         }
 
-        // replace index with all possible elements. The condition
-        // "end-i+1 >= r-index" makes sure that including one element
-        // at index will make a combination with remaining elements
-        // at remaining positions
-        for (int i=start; i<=end && end-i+1 >= r-index; i++)
-        {
-            data[index] = arr[i];
-            combinationUtil(arr, data, i+1, end, index+1, r);
-        }
+        // If A or B still have some characters,
+        // then length of C is smaller than sum
+        // of lengths of A and B, so return false
+        if (i < A.length() || j < B.length())
+            return false;
+
+        return true;
     }
 
-    // The main function that prints all combinations of size r
-    // in arr[] of size n. This function mainly uses combinationUtil()
-    static void printCombination(int arr[], int n, int r)
-    {
-        // A temporary array to store all combination one by one
-        int data[]=new int[r];
+    public static void main(String []args){
 
-        // Print all combination using temporary array 'data[]'
-        combinationUtil(arr, data, 0, n-1, 0, r);
+        String A = "AB";
+        String B = "CD";
+        String C = "ACBG";
+        if (isInterleaved(A, B, C) == true)
+            System.out.printf("%s is interleaved of %s and %s", C, A, B);
+        else
+            System.out.printf("%s is not interleaved of %s and %s", C, A, B);
     }
-
-    public static void main (String[] args) {
-        int arr[] = {1, 2, 3, 4, 5};
-        int r = 3;
-        int n = arr.length;
-        printCombination(arr, n, r);
-    }
-
 }
