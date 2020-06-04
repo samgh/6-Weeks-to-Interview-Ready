@@ -13,7 +13,7 @@ Python: [reverse_list.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/bl
 ## Merge two sorted lists
 Java: [MergeKSorted.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/MergeKLists.java),
 
-Python: [merge_k_lists.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/merge_k_lists.py)
+Python: [merge_k_sorted.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/merge_k_sorted.py)
 
 ## Reorder List
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/XX.java),
