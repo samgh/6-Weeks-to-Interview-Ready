@@ -5,7 +5,6 @@ Title: Check interleaving strings.
 
 Execution: python interleaving_strings.py
 """
-from typing import List
 import unittest
 
 
