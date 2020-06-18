@@ -14,7 +14,7 @@ class Node:
 
 
 # Function to print given linked list
-def printList(head):
+def print_list(head):
 
 	ptr = head
 	while ptr:
@@ -25,7 +25,7 @@ def printList(head):
 
 # Takes two lists sorted in increasing order, and merge their nodes
 # together to make one big sorted list which is returned
-def SortedMerge(a, b):
+def sorted_merge(a, b):
 
 	# Base cases
 	if a is None:
@@ -36,10 +36,10 @@ def SortedMerge(a, b):
 	# Pick either a or b, and recur
 	if a.data <= b.data:
 		result = a
-		result.next = SortedMerge(a.next, b)
+		result.next = sorted_merge(a.next, b)
 	else:
 		result = b
-		result.next = SortedMerge(a, b.next)
+		result.next = sorted_merge(a, b.next)
 
 	return result
 
@@ -51,7 +51,7 @@ It uses the fast/slow pointer strategy
 """
 
 
-def FrontBackSplit(source):
+def front_back_split(source):
 
 	# if length is less than 2, handle separately
 	if source is None or source.next is None:
@@ -76,21 +76,21 @@ def FrontBackSplit(source):
 
 
 # Sort given linked list using Merge sort algorithm
-def MergeSort(head):
+def merge_sort(head):
 
 	# Base case -- length 0 or 1
 	if head is None or head.next is None:
 		return head
 
 	# Split head into 'a' and 'b' sublists
-	front, back = FrontBackSplit(head)
+	front, back = front_back_split(head)
 
 	# Recursively sort the sublists
-	front = MergeSort(front)
-	back = MergeSort(back)
+	front = merge_sort(front)
+	back = merge_sort(back)
 
 	# answer = merge the two sorted lists together
-	return SortedMerge(front, back)
+	return sorted_merge(front, back)
 
 
 # Sort given linked list using Merge sort algorithm
@@ -104,7 +104,7 @@ if __name__ == '__main__':
 		head = Node(key, head)
 
 	# sort the list
-	head = MergeSort(head)
+	head = merge_sort(head)
 
 	# print the sorted list
-	printList(head)
+	print_list(head)
