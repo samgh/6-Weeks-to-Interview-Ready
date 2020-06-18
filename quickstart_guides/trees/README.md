@@ -1,6 +1,68 @@
 # Trees Quickstart
 
-## Title
+## Inorder Traversal
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [inorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/inorder_traversal.py)
+
+## Preorder Traversal
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
 
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Postorder Traversal
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Level order Traversal
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Serialize Binary Tree
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Max Binary Tree Depth
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Lowest Common Ancestor
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Balanced Binary Tree
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Merge Binary Tree
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Invert Binary Tree
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Diameter of Binary Tree
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Tree to Linked List
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+## Maximum Path Sum
+Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+
+Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+
+
