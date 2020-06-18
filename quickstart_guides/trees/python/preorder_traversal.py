@@ -49,8 +49,8 @@ def preorder_traversal(root: TreeNode) -> List[int]:
     return traverse(root, [], [])
 
 
-class TestInorderTraversal(unittest.TestCase):
-    """Unit tests for inorder_traversal."""
+class TestPreorderTraversal(unittest.TestCase):
+    """Unit tests for preorder_traversal."""
 
     def test_1(self):
         tn = TreeNode(1)
