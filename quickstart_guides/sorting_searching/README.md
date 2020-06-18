@@ -1,7 +1,7 @@
 # Sorting and Searching Quickstart
 
 ## Binary Search (LucidProgramming Video)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [BinarySearch.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/BinarySearch.java),
 
 Python: [binary_search.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/binary_search.py)
 

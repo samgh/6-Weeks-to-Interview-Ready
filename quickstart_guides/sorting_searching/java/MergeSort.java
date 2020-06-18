@@ -1,3 +1,11 @@
+/*
+ *   Title: Merge Sort
+ *
+ *   Problem:
+ *      Implement Mergesort on an array
+ *
+ *   Execution: javac MergeSort.java && java MergeSort
+ */
 class MergeSort {
     void merge(int arr[], int l, int m, int r) {
         int n1 = m - l + 1;
