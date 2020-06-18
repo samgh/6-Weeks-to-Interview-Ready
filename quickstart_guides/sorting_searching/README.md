@@ -38,7 +38,7 @@ Python: [find_first_duplicate_entry.py](https://github.com/samgh/6-Weeks-to-Inte
 ## Sort a Linked List (Leetcode)
 Java: [SortLinkedList.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/SortLinkedList.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
+Python: [sort_linked_list.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/sort_linked_list.py)
 
 ## Largest Number (Leetcode)
 Java: [FindLargestNumber.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindLargestNumber.java),
