@@ -36,7 +36,7 @@ Java: [FindFirstDuplicateEntry.java](https://github.com/samgh/6-Weeks-to-Intervi
 Python: [find_first_duplicate_entry.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_first_duplicate_entry.py)
 
 ## Sort a Linked List (Leetcode)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [SortLinkedList.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/SortLinkedList.java),
 
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
 
