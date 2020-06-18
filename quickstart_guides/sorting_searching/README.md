@@ -6,7 +6,7 @@ Java: [BinarySearch.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/bl
 Python: [binary_search.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/binary_search.py)
 
 ## Find Closest Number (LucidProgramming Video)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [FindClosestNumber.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindClosestNumber.java),
 
 Python: [find_closest_number.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_closest_number.py)
 
