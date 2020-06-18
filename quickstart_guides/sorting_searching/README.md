@@ -43,7 +43,7 @@ Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 ## Largest Number (Leetcode)
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
+Python: [find_largest_number.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_largest_number.py)
 
 ## Find the Square Root (Leetcode)
 Java: [FindSqrt.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindSqrt.java),
