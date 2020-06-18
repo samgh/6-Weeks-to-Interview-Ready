@@ -8,7 +8,7 @@ Python: [inorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Rea
 ## Preorder Traversal
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+Python: [preorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/preorder_traversal.py)
 
 ## Postorder Traversal
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
