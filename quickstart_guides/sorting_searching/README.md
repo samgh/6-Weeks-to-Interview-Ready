@@ -26,7 +26,7 @@ Java: [QuickSort.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/
 Python: [quick_sort.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/quick_sort.py)
 
 ## Find Fixed Point (LucidProgramming Video)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [FindFixedPoint.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindFixedPoint.java),
 
 Python: [find_fixed_point.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_fixed_point.py)
 
