@@ -11,7 +11,7 @@ Java: [FindClosestNumber.java](https://github.com/samgh/6-Weeks-to-Interview-Rea
 Python: [find_closest_number.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_closest_number.py)
 
 ## Find Number in Rotated Array (Leetcode)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [FindRotatedArray.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindRotatedArray.java),
 
 Python: [find_rotated_array.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_rotated_array.py)
 
