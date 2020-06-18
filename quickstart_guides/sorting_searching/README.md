@@ -41,7 +41,7 @@ Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
 
 ## Largest Number (Leetcode)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [FindLargestNumber.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/FindLargestNumber.java),
 
 Python: [find_largest_number.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_largest_number.py)
 
