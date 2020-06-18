@@ -1,3 +1,10 @@
+"""
+Title: Merge sort
+
+    Implement merge sort.
+
+Execution: python merge_sort.py
+"""
 from typing import List
 import unittest
 

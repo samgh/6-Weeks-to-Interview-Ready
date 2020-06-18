@@ -1,3 +1,11 @@
+"""
+Title: Find closest number
+
+ Given an array of sorted integers. We need to find the closest value to
+ the given number. Array may contain duplicate values and negative numbers.
+
+Execution: python find_closest_number.py
+"""
 from typing import List, Optional
 
 

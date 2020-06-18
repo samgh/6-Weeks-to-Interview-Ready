@@ -28,5 +28,6 @@ class TestIsPalindrome(unittest.TestCase):
     def test_2(self):
         self.assertEqual(is_palindrome("race a car"), False)
 
+
 if __name__ == '__main__':
     unittest.main()

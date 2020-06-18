@@ -23,7 +23,7 @@ Python: [merge_sort.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob
 ## Implement Quicksort on an array
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
+Python: [quick_sort.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/quick_sort.py)
 
 ## Find Fixed Point (LucidProgramming Video)
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
