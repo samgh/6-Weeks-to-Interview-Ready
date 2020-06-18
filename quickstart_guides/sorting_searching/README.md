@@ -13,7 +13,7 @@ Python: [find_closest_number.py](https://github.com/samgh/6-Weeks-to-Interview-R
 ## Find Number in Rotated Array (Leetcode)
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/XX.py)
+Python: [find_rotated_array.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_rotated_array.py)
 
 ## Implement Mergesort on an array
 Java: [MergeSort.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/MergeSort.java),
