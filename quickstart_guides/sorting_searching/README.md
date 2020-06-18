@@ -31,7 +31,7 @@ Java: [FindFixedPoint.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/
 Python: [find_fixed_point.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_fixed_point.py)
 
 ## Find First Entry in List with Duplicates (LucidProgramming Video)
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
+Java: [FindFirstDuplicateEntry.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/java/XX.java),
 
 Python: [find_first_duplicate_entry.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/sorting_searching/python/find_first_duplicate_entry.py)
 
