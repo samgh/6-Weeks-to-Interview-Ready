@@ -33,7 +33,7 @@ Python: [max_depth_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview
 ## Lowest Common Ancestor
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+Python: [lowest_common_ancestor.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/lowest_common_ancestor.py)
 
 ## Balanced Binary Tree
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
