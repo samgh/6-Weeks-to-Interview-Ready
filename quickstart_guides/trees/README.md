@@ -38,7 +38,7 @@ Python: [lowest_common_ancestor.py](https://github.com/samgh/6-Weeks-to-Intervie
 ## Balanced Binary Tree
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+Python: [is_balanced_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/is_balanced_binary_tree.py)
 
 ## Merge Binary Tree
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
