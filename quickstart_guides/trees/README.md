@@ -31,7 +31,7 @@ Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 Python: [max_depth_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/max_depth_binary_tree.py)
 
 ## Lowest Common Ancestor
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [LowestCommonAncestor.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
 
 Python: [lowest_common_ancestor.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/lowest_common_ancestor.py)
 

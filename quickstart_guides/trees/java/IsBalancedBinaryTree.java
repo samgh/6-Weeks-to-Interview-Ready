@@ -77,5 +77,6 @@ class IsBalancedBinaryTree {
         tree.root.left.left.left = new Node(8);
 
         assert tree.isBalancedBinaryTree(tree.root) == false;
+        System.out.println("Passed all test cases");
     }
 }
