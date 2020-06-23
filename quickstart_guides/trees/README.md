@@ -1,12 +1,12 @@
 # Trees Quickstart
 
 ## Inorder Traversal
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [InorderTraversal.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/InorderTraversal.java),
 
 Python: [inorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/inorder_traversal.py)
 
 ## Preorder Traversal
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [PreorderTraversal.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/PreorderTraversal.java),
 
 Python: [preorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/preorder_traversal.py)
 
