@@ -41,7 +41,7 @@ Java: [IsBalancedBinaryTree.java](https://github.com/samgh/6-Weeks-to-Interview-
 Python: [is_balanced_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/is_balanced_binary_tree.py)
 
 ## Merge Binary Tree
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [MergeBinaryTrees.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/MergeBinaryTrees.java),
 
 Python: [merge_binary_trees.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/merge_binary_trees.py)
 
