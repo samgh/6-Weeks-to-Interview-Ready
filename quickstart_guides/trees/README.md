@@ -21,7 +21,7 @@ Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 Python: [levelorder_traversal.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/levelorder_traversal.py)
 
 ## Serialize Binary Tree
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [SerializeBinaryTree.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/SerializeBinaryTree.java),
 
 Python: [serialize_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/serialize_binary_tree.py)
 
