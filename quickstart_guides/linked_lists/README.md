@@ -21,7 +21,7 @@ Java: [ReorderList.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blo
 Python: [reorder_list.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/reorder_list.py)
 
 ## Remove Duplicates from an Unsorted List
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
+Java: [RemoveUnsortedDuplicates.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/RemoveUnsortedDuplicates.java),
 
 Python: [remove_unsorted_duplicates.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/remove_unsorted_duplicates.py)
 
