@@ -56,7 +56,7 @@ Java: [DiameterOfBinaryTree.java](https://github.com/samgh/6-Weeks-to-Interview-
 Python: [diameter_of_binary_tree.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/diameter_of_binary_tree.py)
 
 ## Tree to Linked List
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [TreeToList.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/TreeToList.java),
 
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
 
