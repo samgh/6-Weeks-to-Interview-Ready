@@ -61,8 +61,8 @@ Java: [TreeToList.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob
 Python: [tree_to_list.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/tree_to_list.py)
 
 ## Maximum Path Sum
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/XX.java),
+Java: [MaxPathSum.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/java/MaxPathSum.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/XX.py)
+Python: [max_path_sum.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/trees/python/max_path_sum.py)
 
 
