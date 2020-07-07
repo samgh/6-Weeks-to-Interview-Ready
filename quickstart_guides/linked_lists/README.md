@@ -31,9 +31,9 @@ Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
 
 ## Pairs with Sum
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
+Java: [PairsWithSum.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/PairsWithSum.java),
 
-Python: [pairs_with_sum.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
+Python: [pairs_with_sum.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/pairs_with_sum.py)
 
 ## Remove Duplicate Nodes
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
