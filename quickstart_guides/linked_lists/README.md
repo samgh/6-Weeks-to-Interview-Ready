@@ -51,7 +51,7 @@ Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
 
 ## Removed Duplicates from a Sorted List
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
+Java: [RemoveSortedDuplicates.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/RemoveSortedDuplicates.java),
 
 Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
 
