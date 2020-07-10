@@ -48,7 +48,7 @@ Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/
 ## Is List Palindromic
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
+Python: [is_palindrome.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/is_palindrome.py)
 
 ## Removed Duplicates from a Sorted List
 Java: [RemoveSortedDuplicates.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/RemoveSortedDuplicates.java),
