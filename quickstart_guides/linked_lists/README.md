@@ -56,6 +56,6 @@ Java: [RemoveSortedDuplicates.java](https://github.com/samgh/6-Weeks-to-Intervie
 Python: [remove_sorted_duplicates.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/remove_sorted_duplicates.py)
 
 ## Swap Two Nodes
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
+Java: [SwapNodes.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/SwapNodes.java),
 
 Python: [swap_nodes.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/swap_nodes.py)
