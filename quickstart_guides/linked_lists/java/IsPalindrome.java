@@ -8,7 +8,6 @@ import java.util.*;
 
 
 class IsPalindrome {
-
     static ListNode head;
 
     public static class ListNode {
