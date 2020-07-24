@@ -38,46 +38,51 @@ class LinkedList:
             last_node = last_node.next
         last_node.next = new_node
 
-    def remove_duplicates(self):
+    def remove_sorted_duplicates(self):
 
         cur = self.head
-        prev = None
-
-        dup_values = dict()
-
-        while cur:
-            if cur.data in dup_values:
-                # Remove node:
-                prev.next = cur.next
-                cur = None
+        while cur is not None and cur.next is not None:
+            if cur.next.data == cur.data:
+                cur.next = cur.next.next
             else:
-                # Have not encountered element before.
-                dup_values[cur.data] = 1
-                prev = cur
-            cur = prev.next
+                cur = cur.next
+        return self.head
 
 
 class TestRemoveDuplicates(unittest.TestCase):
-    """Unit test for remove_duplicates."""
+    """Unit test for remove_sorted_duplicates."""
 
     def test_1(self):
         llist = LinkedList()
         llist.append(1)
-        llist.append(6)
-        llist.append(1)
-        llist.append(4)
         llist.append(2)
-        llist.append(2)
-        llist.append(4)
+        llist.append(3)
+        llist.append(3)
 
-        llist.remove_duplicates()
+        llist.remove_sorted_duplicates()
 
         cur_node = llist.head
         nodes: List[str] = []
         while cur_node:
             nodes.append(cur_node.data)
             cur_node = cur_node.next
-        self.assertEqual(nodes, [1, 6, 4, 2])
+        self.assertEqual(nodes, [1, 2, 3])
+
+    def test_2(self):
+        llist = LinkedList()
+        llist.append(8)
+        llist.append(8)
+        llist.append(9)
+        llist.append(12)
+
+        llist.remove_sorted_duplicates()
+
+        cur_node = llist.head
+        nodes: List[str] = []
+        while cur_node:
+            nodes.append(cur_node.data)
+            cur_node = cur_node.next
+        self.assertEqual(nodes, [8, 9, 12])
 
 
 if __name__ == '__main__':
