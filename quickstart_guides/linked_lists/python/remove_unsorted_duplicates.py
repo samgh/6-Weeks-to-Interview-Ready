@@ -1,10 +1,10 @@
 """
-Title: Linked list remove duplicates
+Title: Linked list remove unsorted duplicates
 
 Problem:
-    Removes duplicates in linked list.
+    Removes duplicates in an unsorted linked list.
 
-Execution: python remove_duplicates.py
+Execution: python remove_unsorted_duplicates.py
 """
 from typing import List
 import unittest
@@ -58,7 +58,7 @@ class LinkedList:
 
 
 class TestRemoveDuplicates(unittest.TestCase):
-    """Unit test for remove_duplicates."""
+    """Unit test for remove_unsorted_duplicates."""
 
     def test_1(self):
 
@@ -79,6 +79,42 @@ class TestRemoveDuplicates(unittest.TestCase):
             nodes.append(cur_node.data)
             cur_node = cur_node.next
         self.assertEqual(nodes, [1, 6, 4, 2])
+
+    def test_2(self):
+
+        llist = LinkedList()
+        llist.append(1)
+        llist.append(2)
+        llist.append(2)
+        llist.append(1)
+        llist.append(2)
+        llist.append(2)
+        llist.append(1)
+
+        llist.remove_duplicates()
+
+        cur_node = llist.head
+        nodes: List[str] = []
+        while cur_node:
+            nodes.append(cur_node.data)
+            cur_node = cur_node.next
+        self.assertEqual(nodes, [1, 2])
+
+    def test_3(self):
+
+        llist = LinkedList()
+        llist.append(3)
+        llist.append(2)
+        llist.append(1)
+
+        llist.remove_duplicates()
+
+        cur_node = llist.head
+        nodes: List[str] = []
+        while cur_node:
+            nodes.append(cur_node.data)
+            cur_node = cur_node.next
+        self.assertEqual(nodes, [3, 2, 1])
 
 
 if __name__ == '__main__':

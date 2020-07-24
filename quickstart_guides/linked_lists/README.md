@@ -38,7 +38,7 @@ Python: [pairs_with_sum.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/
 ## Remove Duplicate Nodes
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/XX.py)
+Python: [remove_unsorted_nodes.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/python/remove_unsorted_nodes.py)
 
 ## Reverse Nodes
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/linked_lists/java/XX.java),
