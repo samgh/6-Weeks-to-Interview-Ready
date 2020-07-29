@@ -23,7 +23,7 @@ Python: [course_schedule.py](https://github.com/samgh/6-Weeks-to-Interview-Ready
 ## Alien Dictionary
 Java: [AlienDictionary.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/AlienDictionary.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/XX.py)
+Python: [alien_dictionary.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/alien_dictionary.py)
 
 ## Network Delay Time
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/XX.java),
