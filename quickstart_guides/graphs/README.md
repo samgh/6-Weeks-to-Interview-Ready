@@ -28,7 +28,7 @@ Python: [alien_dictionary.py](https://github.com/samgh/6-Weeks-to-Interview-Read
 ## Network Delay Time
 Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/XX.java),
 
-Python: [XX.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/XX.py)
+Python: [network_delay.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/network_delay.py)
 
 ## Is Graph Bipartite
 Java: [IsBipartite.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/IsBipartite.java),
