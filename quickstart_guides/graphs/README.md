@@ -26,7 +26,7 @@ Java: [AlienDictionary.java](https://github.com/samgh/6-Weeks-to-Interview-Ready
 Python: [alien_dictionary.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/alien_dictionary.py)
 
 ## Network Delay Time
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/XX.java),
+Java: [NetworkDelay.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/NetworkDelay.java),
 
 Python: [network_delay.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/network_delay.py)
 
