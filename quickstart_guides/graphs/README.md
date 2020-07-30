@@ -16,7 +16,7 @@ Java: [DFS.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master
 Python: [dfs.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/dfs.py)
 
 ## Course Scheduling
-Java: [XX.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/XX.java),
+Java: [CourseSchedule.java](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/java/CourseSchedule.java),
 
 Python: [course_schedule.py](https://github.com/samgh/6-Weeks-to-Interview-Ready/blob/master/quickstart_guides/graphs/python/course_schedule.py)
 
