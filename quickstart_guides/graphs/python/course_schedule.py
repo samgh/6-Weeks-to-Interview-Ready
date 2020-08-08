@@ -1,5 +1,6 @@
 """
 Title: Course schedule
+
 Problem:
     There are a total of numCourses courses you have to take, labeled from 0 to
     numCourses-1.
@@ -12,10 +13,11 @@ Problem:
 
 Execution: python course_schedule.py
 """
+from typing import List
 import unittest
 
 
-def course_schedule(num_courses, pre_reqs):
+def course_schedule(num_courses: int, pre_reqs: List[List[int]]) -> bool:
     """Determines if course schedule is feasible."""
     if len(pre_reqs) == 0:
         return True
@@ -28,7 +30,7 @@ def course_schedule(num_courses, pre_reqs):
     return True
 
 
-def has_cycle(adj_list, visited, current_node=0):
+def has_cycle(adj_list: dict, visited: List[int], current_node: int = 0) -> bool:
     """Check if graph contains cycle."""
     if visited[current_node] == -1:
         return False
@@ -61,5 +63,5 @@ class TestCourseSchedule(unittest.TestCase):
         self.assertEqual(course_schedule(2, [[1, 0]]), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

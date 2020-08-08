@@ -1,5 +1,6 @@
 """
 Title: Network delay time
+
 Problem:
     There are N network nodes, labelled 1 to N.
 
@@ -12,19 +13,20 @@ Problem:
 
 Execution: python network_delay.py
 """
-from typing import List
+from typing import List, Optional
 import unittest
 from collections import defaultdict
 
 
-def network_delay(times: List[List[int]], n_val: int, k_val: int):
+def network_delay(times: List[List[int]], n_val: int, k_val: int) -> float:
+    """Calculate the network delay."""
     graph = defaultdict(list)
     for u, v, w in times:
         graph[u].append((w, v))
 
-    dist = {node: float('inf') for node in range(1, n_val + 1)}
+    dist = {node: float("inf") for node in range(1, n_val + 1)}
 
-    def dfs(node, elapsed):
+    def dfs(node: int, elapsed: int) -> Optional[float]:
         if elapsed >= dist[node]:
             return
         dist[node] = elapsed
@@ -33,7 +35,7 @@ def network_delay(times: List[List[int]], n_val: int, k_val: int):
 
     dfs(k_val, 0)
     ans = max(dist.values())
-    return ans if ans < float('inf') else -1
+    return ans if ans < float("inf") else -1
 
 
 class TestNetworkDelay(unittest.TestCase):
@@ -46,7 +48,5 @@ class TestNetworkDelay(unittest.TestCase):
         self.assertEqual(network_delay(times, n_val, k_val), 2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

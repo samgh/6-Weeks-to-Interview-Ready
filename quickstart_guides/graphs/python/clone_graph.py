@@ -1,5 +1,6 @@
 """
 Title: Clone graph
+
 Problem:
     Given the root node of a directed graph, clone this graph by creating its
     deep copy so that the cloned graph has the same vertices and edges as the
@@ -15,7 +16,9 @@ import unittest
 
 
 class Node:
-    def __init__(self, d):
+    """Node class for graph."""
+
+    def __init__(self, d: int) -> None:
         self.data = d
         self.neighbors = []
 
@@ -24,16 +27,16 @@ def clone_rec(root, nodes_completed):
     if root is None:
         return None
 
-    pNew = Node(root.data)
-    nodes_completed[root] = pNew
+    p_new = Node(root.data)
+    nodes_completed[root] = p_new
 
     for p in root.neighbors:
         x = nodes_completed.get(p)
         if x is None:
-            pNew.neighbors += [clone_rec(p, nodes_completed)]
+            p_new.neighbors += [clone_rec(p, nodes_completed)]
         else:
-            pNew.neighbors += [x]
-    return pNew
+            p_new.neighbors += [x]
+    return p_new
 
 
 def clone(root):
@@ -43,7 +46,7 @@ def clone(root):
 
 # This is un-directed graph i.e. if there is an edge from x to y that means
 # there must be an edge from y to x and there is no edge from a node to itself
-# hence there can maximim of (nodes * nodes - nodes) / 2 edges in this graph.
+# hence there can maximum of (nodes * nodes - nodes) / 2 edges in this graph.
 def create_test_graph_undirected(nodes_count, edges_count):
     vertices = []
     for i in range(0, nodes_count):
@@ -99,5 +102,5 @@ class TestCloneGraph(unittest.TestCase):
         self.assertEqual(x, y)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

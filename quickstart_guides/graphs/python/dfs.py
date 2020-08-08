@@ -1,5 +1,6 @@
 """
 Title: Depth-first search
+
 Problem:
     Depth First Traversal (or Search) for a graph is similar to Depth First
     Traversal of a tree. The only catch here is, unlike trees, graphs may
@@ -8,21 +9,24 @@ Problem:
 
 Execution: python dfs.py
 """
+from typing import List
 import unittest
 from collections import defaultdict
 
 
 class DFS:
+    """Depth-first search class."""
 
     def __init__(self):
         self.graph = defaultdict(list)
         self.result = []
 
-    def add_edge(self, u, v):
+    def add_edge(self, u: int, v: int) -> None:
+        """Add edge to graph."""
         self.graph[u].append(v)
 
-    def dfs_helper(self, v, visited):
-
+    def dfs_helper(self, v: int, visited: List[int]) -> None:
+        """Recursive helper for depth-first search method."""
         # Mark the current node as visited and print it.
         visited[v] = True
         self.result.append(v)
@@ -32,7 +36,7 @@ class DFS:
             if not visited[i]:
                 self.dfs_helper(i, visited)
 
-    def dfs(self, v):
+    def dfs(self, v: int) -> List[int]:
         # Mark all the vertices as not visited.
         visited = [False] * (max(self.graph) + 1)
 
@@ -72,5 +76,5 @@ class TestDFS(unittest.TestCase):
         self.assertEqual(g.dfs(1), [1, 2, 0, 3])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

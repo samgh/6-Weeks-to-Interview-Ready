@@ -1,16 +1,19 @@
 """
 Title: Alien dictionary
+
 Problem:
     Given a sorted dictionary (array of words) of an alien language, find
     order of characters in the language.
 
 Execution: python alien_dictionary.py
 """
+from typing import List
 import unittest
 from collections import defaultdict
 
 
-def alien_order(words):
+def alien_order(words: List[str]):
+    """Find order of characters in alien language."""
     pre = defaultdict(set)
     suc = defaultdict(set)
 
@@ -20,9 +23,9 @@ def alien_order(words):
                 suc[a].add(b)
                 pre[b].add(a)
                 break
-    chars = set(''.join(words))
+    chars = set("".join(words))
     char_to_process = chars - set(pre)
-    order = ''
+    order = ""
     while char_to_process:
         # Receiving first node in "char_to_process" and add to string.
         ch = char_to_process.pop()
@@ -47,6 +50,5 @@ class TestAlienDictionary(unittest.TestCase):
         self.assertEqual(alien_order(["wrt", "wrf", "ert"]), "wrtef")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

@@ -1,14 +1,18 @@
 """
 Title: Breadth-first search
-Problem:
-    Breadth First Traversal (or Search) for a graph is similar to Breadth First Traversal of a tree.
-    The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node
-    again. To avoid processing a node more than once, we use a boolean visited array. For
-    simplicity, it is assumed that all vertices are reachable from the starting vertex.
 
+Problem:
+    Breadth First Traversal (or Search) for a graph is similar to Breadth First
+    Traversal of a tree. The only catch here is, unlike trees, graphs may
+    contain cycles, so we may come to the same node again.
+
+    To avoid processing a node more than once, we use a boolean visited array.
+    For simplicity, it is assumed that all vertices are reachable from the
+    starting vertex.
 
 Execution: python bfs.py
 """
+from typing import List
 import unittest
 from collections import defaultdict
 
@@ -18,14 +22,16 @@ class BFS:
     This class represents a directed graph by making use of the adjacency
     list representation.
     """
-    def __init__(self):
+
+    def __init__(self) -> None:
         self.graph = defaultdict(list)
 
-    def add_edge(self, u, v):
+    def add_edge(self, u: int, v: int) -> None:
+        """Add edge in graph."""
         self.graph[u].append(v)
 
-    def bfs(self, s):
-
+    def bfs(self, s: int) -> List[int]:
+        """Perform breadth first search."""
         result = []
 
         # Mark all the vertices as not visited.
@@ -72,5 +78,5 @@ class TestBFS(unittest.TestCase):
         self.assertEqual(g.bfs(1), [1, 2, 0, 3])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
