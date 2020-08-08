@@ -1,14 +1,16 @@
 """
 Title: Longest substring without repeating characters.
 
-Given a string, find the length of the longest substring without repeating characters.
+Problem:
+    Given a string, find the length of the longest substring without repeating
+    characters.
 
 Execution: python length_of_longest_substring.py
 """
 import unittest
 
 
-def length_of_longest_substring(s: str):
+def length_of_longest_substring(s: str) -> int:
     """Given a string, determine the length of the longest substring."""
     last, res, st = dict(), 0, 0
     for i, v in enumerate(s):
@@ -41,5 +43,5 @@ class TestLengthOfLongestSubstring(unittest.TestCase):
         print("is a subsequence and not a substring.")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

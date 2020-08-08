@@ -2,9 +2,12 @@
 Title: Longest substring
 
 Problem: 
-    Given two strings, write a function that returns the longest common substring.
-    e.g.
+    Given two strings, write a function that returns the longest common
+    substring. e.g.
+
+    ```
     longestSubstring("ABAB", "BABA") = "ABA"
+    ```
 
 Execution: python longest_substring.py
 """
@@ -25,10 +28,10 @@ def longest_substring(a: str, b: str) -> str:
                 if i == 0 or j == 0:
                     cache[i][j] = 1
                 else:
-                    cache[i][j] = cache[i-1][j-1] + 1
+                    cache[i][j] = cache[i - 1][j - 1] + 1
                 if cache[i][j] > str_len:
                     str_len = cache[i][j]
-                    out = a[i-str_len+1:i+1]
+                    out = a[i - str_len + 1 : i + 1]
     return out
 
 
@@ -41,6 +44,5 @@ class TestLongestSubstring(unittest.TestCase):
         self.assertEqual(longest_substring(a, b), "ABA")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

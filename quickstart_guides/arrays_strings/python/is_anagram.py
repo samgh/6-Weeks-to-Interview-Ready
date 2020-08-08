@@ -7,7 +7,6 @@ Problem:
 
 Execution: python is_anagram.py
 """
-from collections import defaultdict
 import unittest
 
 
@@ -59,6 +58,5 @@ class TestIsAnagram(unittest.TestCase):
         self.assertEqual(is_anagram_hash_table(s, t), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

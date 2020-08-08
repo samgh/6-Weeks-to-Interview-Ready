@@ -1,44 +1,45 @@
 """
- * Title: Array Combinations
- * Author: Sam Gavis-Hughson
- * Date: 11/20/2017
- * 
- * Given two strings, write a function that determines the minimum edit distance
- * between the two strings. You can insert and modify characters.
- * 
- * eg.
- * editDistance("ABCD", "ACBD") = 2 (ABCD->ACCD->ACBD)
- * editDistance("AC", "ABCD") = 2 (AC->ABC->ABCD) 
- * 
- * Execution: python edit_distance.py
+Title: Array Combinations
+
+Problem:
+    Given two strings, write a function that determines the minimum edit
+    distance between the two strings. You can insert and modify
+    characters. eg.
+
+    ```
+    editDistance("ABCD", "ACBD") = 2 (ABCD->ACCD->ACBD)
+    editDistance("AC", "ABCD") = 2 (AC->ABC->ABCD)
+    ```
+
+Execution: python edit_distance.py
 """
 import unittest
-from typing import List
+from typing import Dict
 
 
-def brute_force_edit_distance(s1: str, s2: str):
+def brute_force_edit_distance(s1: str, s2: str) -> float:
     return brute_force_edit_distance_helper(s1, s2, 0, 0)
 
 
-def brute_force_edit_distance_helper(s1: str, s2: str, i: int, j: int):
+def brute_force_edit_distance_helper(s1: str, s2: str, i: int, j: int) -> float:
     if i == len(s1):
         return len(s2) - j
     if j == len(s2):
         return len(s1) - i
 
     # We can swap the characters if they're unequal or do nothing otherwise.
-    min_val = brute_force_edit_distance_helper(s1, s2, i+1, j+1)
+    min_val = brute_force_edit_distance_helper(s1, s2, i + 1, j + 1)
     if s1[i] != s2[j]:
         min_val += 1
 
     # We can insert a character into s1 or s2
-    min_val = min(min_val, brute_force_edit_distance_helper(s1, s2, i+1, j) + 1)
-    min_val = min(min_val, brute_force_edit_distance_helper(s1, s2, i, j+1) + 1)
+    min_val = min(min_val, brute_force_edit_distance_helper(s1, s2, i + 1, j) + 1)
+    min_val = min(min_val, brute_force_edit_distance_helper(s1, s2, i, j + 1) + 1)
 
     return min_val
 
 
-def top_down_edit_distance(s1: str, s2: str):
+def top_down_edit_distance(s1: str, s2: str) -> Dict[int, int]:
     dp = dict()
     for i in range(len(s1) + 1):
         for j in range(len(s2) + 1):
@@ -46,25 +47,27 @@ def top_down_edit_distance(s1: str, s2: str):
     return top_down_edit_distance_helper(s1, s2, 0, 0, dp)
 
 
-def top_down_edit_distance_helper(s1: str, s2: str, i: int, j: int, dp: dict):
+def top_down_edit_distance_helper(
+    s1: str, s2: str, i: int, j: int, dp: dict
+):
     if dp[(i, j)] == -1:
         if i == len(s1):
             return len(s2) - j
         if j == len(s2):
             return len(s1) - i
 
-        min_val = top_down_edit_distance_helper(s1, s2, i+1, j+1, dp)
+        min_val = top_down_edit_distance_helper(s1, s2, i + 1, j + 1, dp)
         if s1[i] != s2[j]:
             min_val += 1
 
-        min_val = min(min_val, top_down_edit_distance_helper(s1, s2, i+1, j, dp) + 1)
-        min_val = min(min_val, top_down_edit_distance_helper(s1, s2, i, j+1, dp) + 1)
+        min_val = min(min_val, top_down_edit_distance_helper(s1, s2, i + 1, j, dp) + 1)
+        min_val = min(min_val, top_down_edit_distance_helper(s1, s2, i, j + 1, dp) + 1)
         dp[(i, j)] = min_val
 
     return dp[(i, j)]
 
 
-def bottom_up_edit_distance(s1: str, s2: str):
+def bottom_up_edit_distance(s1: str, s2: str) -> Dict[int, int]:
     dp = dict()
     for i in range(len(s1) + 1):
         for j in range(len(s2) + 1):
@@ -73,11 +76,11 @@ def bottom_up_edit_distance(s1: str, s2: str):
             elif j == 0:
                 dp[(i, j)] = i
             else:
-                min_val = dp[(i-1), (j-1)]
-                if s1[i-1] != s2[j-1]:
+                min_val = dp[(i - 1), (j - 1)]
+                if s1[i - 1] != s2[j - 1]:
                     min_val += 1
-                min_val = min(min_val, dp[(i-1, j)] + 1)
-                min_val = min(min_val, dp[(i, j-1)] + 1)
+                min_val = min(min_val, dp[(i - 1, j)] + 1)
+                min_val = min(min_val, dp[(i, j - 1)] + 1)
                 dp[(i, j)] = min_val
     return dp[(len(s1), len(s2))]
 
@@ -107,5 +110,5 @@ class TestEditDistance(unittest.TestCase):
         self.assertEqual(bottom_up_edit_distance("", "ABCD"), 4)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
