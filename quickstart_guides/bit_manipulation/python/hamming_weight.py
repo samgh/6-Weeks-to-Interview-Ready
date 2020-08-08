@@ -7,16 +7,15 @@ Problem:
 
 Execution: python hamming_weight.py
 """
-from typing import List
 import unittest
 
 
-def hamming_weight(n: List[int]) -> int:
+def hamming_weight(n: int) -> int:
     """Function for calculating the Hamming distance."""
     s = 0
     while n != 0:
         s += 1
-        n &= (n - 1)
+        n &= n - 1
     return s
 
 
@@ -36,6 +35,5 @@ class TestHammingWeight(unittest.TestCase):
         self.assertEqual(hamming_weight(input_list), 31)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

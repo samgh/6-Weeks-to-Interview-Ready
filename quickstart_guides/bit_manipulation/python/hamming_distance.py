@@ -16,15 +16,15 @@ import unittest
 
 def hamming_distance(nums: List[int]) -> int:
     """Function for calculating the Hamming distance."""
-    S = 0
+    res = 0
     while nums != [0] * len(nums):
         c = 0
         for i in range(len(nums)):
             if nums[i] % 2 == 1:
                 c += 1
             nums[i] = (nums[i] - nums[i] % 2) // 2
-        S += c * (len(nums) - c)
-    return S
+        res += c * (len(nums) - c)
+    return res
 
 
 class TestHammingDistance(unittest.TestCase):
@@ -42,6 +42,5 @@ class TestHammingDistance(unittest.TestCase):
         print(f"Explanation: {output}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

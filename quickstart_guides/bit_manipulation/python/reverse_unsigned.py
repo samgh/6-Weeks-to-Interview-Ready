@@ -6,12 +6,12 @@ Problem:
 
 Execution: python reverse_unsigned.py
 """
-from typing import List
 import unittest
 
 
 def reverse_unsigned(n: int) -> int:
-    return int("{:032b}".format(n)[::-1],2)
+    """Reverse an unsigned integer."""
+    return int("{:032b}".format(n)[::-1], 2)
 
 
 class TestReverseUnsigned(unittest.TestCase):
@@ -28,6 +28,5 @@ class TestReverseUnsigned(unittest.TestCase):
         self.assertEqual(int(reverse_unsigned(input_1)), output_1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
