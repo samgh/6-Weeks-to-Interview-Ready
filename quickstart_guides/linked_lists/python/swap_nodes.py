@@ -10,16 +10,20 @@ import unittest
 
 
 class LinkedList(object):
-    def __init__(self):
+    """Linked list class."""
+
+    def __init__(self) -> None:
         self.head = None
 
     class Node(object):
-        def __init__(self, d):
+        """Basic node class for linked list."""
+
+        def __init__(self, d) -> None:
             self.data = d
             self.next = None
 
-    def swap_nodes(self, x, y):
-
+    def swap_nodes(self, x: int, y: int) -> None:
+        """Swap two nodes in linked list."""
         # Nothing to do if x and y are same
         if x == y:
             return
@@ -88,5 +92,5 @@ class TestSwapNodes(unittest.TestCase):
         self.assertEqual(llist.head.data, 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

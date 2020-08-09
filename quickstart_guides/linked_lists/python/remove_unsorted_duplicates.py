@@ -11,22 +11,28 @@ import unittest
 
 
 class Node:
+    """Linked list Node class."""
+
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
 class LinkedList:
+    """Generic linked list class."""
+
     def __init__(self):
         self.head = None
 
     def print_list(self):
+        """Print linked list."""
         cur_node = self.head
         while cur_node:
             print(cur_node.data)
             cur_node = cur_node.next
 
     def append(self, data):
+        """Append node to end of linked list."""
         new_node = Node(data)
 
         if self.head is None:
@@ -39,7 +45,7 @@ class LinkedList:
         last_node.next = new_node
 
     def remove_duplicates(self):
-        
+        """Remove duplicates from an (unsorted) linked list."""
         cur = self.head
         prev = None
 
@@ -49,7 +55,6 @@ class LinkedList:
             if cur.data in dup_values:
                 # Remove node:
                 prev.next = cur.next
-                cur = None
             else:
                 # Have not encountered element before.
                 dup_values[cur.data] = 1
@@ -61,7 +66,6 @@ class TestRemoveDuplicates(unittest.TestCase):
     """Unit test for remove_unsorted_duplicates."""
 
     def test_1(self):
-
         llist = LinkedList()
         llist.append(1)
         llist.append(6)
@@ -81,7 +85,6 @@ class TestRemoveDuplicates(unittest.TestCase):
         self.assertEqual(nodes, [1, 6, 4, 2])
 
     def test_2(self):
-
         llist = LinkedList()
         llist.append(1)
         llist.append(2)
@@ -101,7 +104,6 @@ class TestRemoveDuplicates(unittest.TestCase):
         self.assertEqual(nodes, [1, 2])
 
     def test_3(self):
-
         llist = LinkedList()
         llist.append(3)
         llist.append(2)
@@ -117,5 +119,5 @@ class TestRemoveDuplicates(unittest.TestCase):
         self.assertEqual(nodes, [3, 2, 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -11,12 +11,14 @@ import unittest
 
 class ListNode:
     """Class for Linked List node."""
-    def __init__(self, x):
+
+    def __init__(self, x: int) -> None:
         self.val = x
         self.next = None
 
 
 def is_palindrome(head: ListNode) -> bool:
+    """Check if linked list is palindrome."""
     vals = []
     curr = head
     while curr:
@@ -48,5 +50,5 @@ class TestIsPalindrome(unittest.TestCase):
         self.assertEqual(is_palindrome(list_2), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

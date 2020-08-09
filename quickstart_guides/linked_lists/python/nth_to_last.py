@@ -6,21 +6,23 @@ Problem:
 
 Execution: python nth_to_last.py
 """
-from typing import List
 import unittest
 
 
 class Node:
-    def __init__(self, data):
+    def __init__(self, data: str) -> None:
         self.data = data
         self.next = None
 
 
 class LinkedList:
-    def __init__(self):
+    """Linked list class."""
+
+    def __init__(self) -> None:
         self.head = None
 
-    def append(self, data):
+    def append(self, data: str) -> None:
+        """Append node to list."""
         new_node = Node(data)
 
         if self.head is None:
@@ -32,8 +34,8 @@ class LinkedList:
             last_node = last_node.next
         last_node.next = new_node
 
-    def len_iterative(self):
-
+    def len_iterative(self) -> int:
+        """Calculate the length iteratively."""
         count = 0
         cur_node = self.head
 
@@ -42,8 +44,8 @@ class LinkedList:
             cur_node = cur_node.next
         return count
 
-    def print_nth_from_last(self, n):
-
+    def print_nth_from_last(self, n: int) -> None:
+        """Print nth from last node."""
         # Method 1:
         total_len = self.len_iterative()
 
@@ -66,10 +68,9 @@ class TestNthToLast(unittest.TestCase):
         llist.append("B")
         llist.append("C")
         llist.append("D")
-        
+
         self.assertEqual(llist.print_nth_from_last(2), "C")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

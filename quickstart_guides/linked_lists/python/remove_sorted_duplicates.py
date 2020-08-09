@@ -11,22 +11,28 @@ import unittest
 
 
 class Node:
+    """Node for linked list."""
+
     def __init__(self, data):
         self.data = data
         self.next = None
 
 
 class LinkedList:
+    """General linked list class."""
+
     def __init__(self):
         self.head = None
 
-    def print_list(self):
+    def print_list(self) -> None:
+        """Print elements of linked list."""
         cur_node = self.head
         while cur_node:
             print(cur_node.data)
             cur_node = cur_node.next
 
     def append(self, data):
+        """Append item to end of linked list."""
         new_node = Node(data)
 
         if self.head is None:
@@ -39,7 +45,7 @@ class LinkedList:
         last_node.next = new_node
 
     def remove_sorted_duplicates(self):
-
+        """Remove duplicates from sorted linked list."""
         cur = self.head
         while cur is not None and cur.next is not None:
             if cur.next.data == cur.data:
@@ -85,5 +91,5 @@ class TestRemoveDuplicates(unittest.TestCase):
         self.assertEqual(nodes, [8, 9, 12])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
