@@ -20,8 +20,8 @@ class GraphNode
 { 
     int val; 
   
-    // A neighbour Vector which contains references to 
-    // all the neighbours of a GraphNode 
+    // A neighbour Vector which contains references to all the neighbours of a
+    // GraphNode
     Vector<GraphNode> neighbours; 
     public GraphNode(int val) 
     { 
@@ -49,29 +49,28 @@ class CloneGraph
   
         while (!q.isEmpty()) 
         { 
-            // Get the front node from the queue 
-            // and then visit all its neighbours 
+            // Get the front node from the queue and then visit all its
+            // neighbours.
             GraphNode u = q.poll(); 
   
-            // Get corresponding Cloned Graph Node 
+            // Get corresponding Cloned Graph Node.
             GraphNode cloneNodeU = hm.get(u); 
             if (u.neighbours != null) 
             { 
                 Vector<GraphNode> v = u.neighbours; 
                 for (GraphNode graphNode : v) 
                 { 
-                    // Get the corresponding cloned node 
-                    // If the node is not cloned then we will 
-                    // simply get a null 
+                    // Get the corresponding cloned node. If the node is not
+                    // cloned then we will simply get a null.
                     GraphNode cloneNodeG = hm.get(graphNode); 
   
-                    // Check if this node has already been created 
+                    // Check if this node has already been created.
                     if (cloneNodeG == null) 
                     { 
                         q.add(graphNode); 
   
-                        // If not then create a new Node and 
-                        // put into the HashMap 
+                        // If not then create a new Node and  put into the
+                        // HashMap.
                         cloneNodeG = new GraphNode(graphNode.val); 
                         hm.put(graphNode,cloneNodeG); 
                     } 

@@ -17,10 +17,10 @@ import java.io.*;
 
 class IsBipartite
 {
-    final static int vertices = 4; // No. of Vertices
+    // No. of Vertices.
+    final static int vertices = 4;
 
-    // This function returns true if
-    // graph G[V][V] is Bipartite, else false
+    // This function returns true if graph G[V][V] is Bipartite, else false.
     boolean isBipartite(int G[][],int src)
     {
         // Create a color array to store colors assigned to all veritces. Vertex

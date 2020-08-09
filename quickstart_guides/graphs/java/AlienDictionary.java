@@ -88,15 +88,11 @@ class Graph
 
 public class AlienDictionary
 {
-    // This function fidns and prints order
-    // of characer from a sorted array of words.
-    // alpha is number of possible alphabets
-    // starting from 'a'. For simplicity, this
-    // function is written in a way that only
-    // first 'alpha' characters can be there
-    // in words array. For example if alpha
-    //  is 7, then words[] should contain words
-    // having only 'a', 'b','c' 'd', 'e', 'f', 'g'
+    // This function finds and prints order of character from a sorted array of
+    // words. alpha is number of possible alphabets starting from 'a'. For
+    // simplicity, this function is written in a way that only first 'alpha'
+    // characters can be there in words array. For example if alpha is 7, then
+    // words[] should contain words having only 'a', 'b','c' 'd', 'e', 'f', 'g'.
     private static ArrayList<Character> printOrder(String[] words, int alpha)
     {
         Graph graph = new Graph(alpha);

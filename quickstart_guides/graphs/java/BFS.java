@@ -18,10 +18,11 @@ import java.util.*;
 // representation
 class BFS
 {
-    private int V;   // No. of vertices
-    private LinkedList<Integer> adj[]; //Adjacency Lists
+    // No. of vertices.
+    private int V;
+    // Adjacency Lists.
+    private LinkedList<Integer> adj[];
 
-    // Constructor
     BFS(int v)
     {
         V = v;
@@ -30,37 +31,34 @@ class BFS
             adj[i] = new LinkedList();
     }
 
-    // Function to add an edge into the graph
+    // Function to add an edge into the graph.
     void addEdge(int v,int w)
     {
         adj[v].add(w);
     }
 
-    // prints BFS traversal from a given source s
+    // prints BFS traversal from a given source s.
     ArrayList<Integer> bfs(int s)
     {
-        // Mark all the vertices as not visited(By default
-        // set as false)
+        // Mark all the vertices as not visited(By default set as false).
         boolean visited[] = new boolean[V];
 
-        // Create a queue for BFS
+        // Create a queue for BFS.
         LinkedList<Integer> queue = new LinkedList<Integer>();
         ArrayList<Integer> result = new ArrayList<Integer>();
 
-        // Mark the current node as visited and enqueue it
+        // Mark the current node as visited and enqueue it.
         visited[s]=true;
         queue.add(s);
 
         while (queue.size() != 0)
         {
-            // Dequeue a vertex from queue and print it
+            // Dequeue a vertex from queue and print it.
             s = queue.poll();
             result.add(s);
-            //System.out.print(s+" ");
 
-            // Get all adjacent vertices of the dequeued vertex s
-            // If a adjacent has not been visited, then mark it
-            // visited and enqueue it
+            // Get all adjacent vertices of the dequeued vertex s. If a adjacent
+            // has not been visited, then mark it visited and enqueue it.
             Iterator<Integer> i = adj[s].listIterator();
             while (i.hasNext())
             {

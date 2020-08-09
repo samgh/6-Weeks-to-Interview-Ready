@@ -27,7 +27,7 @@ public class CourseSchedule {
             return true;
         }
 
-        // First transform the edge list to adj. list
+        // First transform the edge list to adj. list.
         Map<Integer, List<Integer>> adjList = new HashMap<>();
         for (int[] edge : prerequisites) {
             if (adjList.containsKey(edge[0])) {

@@ -59,5 +59,4 @@ public class NetworkDelay {
 
         System.out.println("Passed all test cases");
     }
-
 }

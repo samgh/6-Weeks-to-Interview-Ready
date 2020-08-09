@@ -1,4 +1,15 @@
-// Java program to print DFS traversal from a given given graph
+/*
+ * Title: Depth-first search
+ *
+ * Problem:
+ *    Depth First Traversal (or Search) for a graph is similar to Depth First
+ *    Traversal of a tree. The only catch here is, unlike trees, graphs may
+ *    contain cycles, a node may be visited twice. To avoid processing a node more
+ *    than once, use a boolean visited array.
+ *
+ *   Execution: javac DFS.java && java DFS
+ *
+ */
 import java.io.*;
 import java.util.*;
 
