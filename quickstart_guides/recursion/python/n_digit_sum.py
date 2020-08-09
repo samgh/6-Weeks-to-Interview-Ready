@@ -1,13 +1,13 @@
 """
 Title: n-digit sum.
 
+Problem:
     Recursive function to count 'n' digit  numbers with sum of digits as 'sum'
     This function considers leading 0's  also as digits, that is why not
     directly called.
 
 Execution: python n_digit_sum.py
 """
-from typing import Any, List
 import unittest
 
 
@@ -25,8 +25,8 @@ def count_rec(n: int, sum_val: int) -> int:
     # Traverse through every digit and  count numbers beginning with it using
     # recursion.
     for i in range(10):
-        if (sum_val-i >= 0):
-            ans = ans + count_rec(n-1, sum_val-i) 
+        if sum_val - i >= 0:
+            ans = ans + count_rec(n - 1, sum_val - i)
 
     return ans
 
@@ -43,8 +43,8 @@ def final_count(n: int, sum_val: int) -> int:
     # Traverse through every digit from 1 to 9 and count numbers beginning with
     # it.
     for i in range(1, 10):
-        if (sum_val-i >= 0):
-            ans = ans + count_rec(n-1, sum_val-i)
+        if sum_val - i >= 0:
+            ans = ans + count_rec(n - 1, sum_val - i)
 
     return ans
 
@@ -58,6 +58,5 @@ class TestNDigitSum(unittest.TestCase):
         self.assertEqual(final_count(n, sum_val), 5)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-  

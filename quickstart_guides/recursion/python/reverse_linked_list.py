@@ -1,8 +1,9 @@
 """
 Title: Reverse linked list
 
-Given a linked list, write a function that prints the nodes of the list in
-reverse order.
+Problem:
+    Given a linked list, write a function that prints the nodes of the list in
+    reverse order.
 
 Execution: python reverse_linked_list.py
 """
@@ -10,16 +11,21 @@ import unittest
 
 
 class Node:
-    def __init__(self, data):
+    """Node class for linked list."""
+
+    def __init__(self, data) -> None:
         self.data = data
         self.next = None
 
 
 class LinkedList:
+    """Linked list class."""
+
     def __init__(self):
         self.head = None
 
-    def append(self, data):
+    def append(self, data) -> None:
+        """Append to end of linked list."""
         new_node = Node(data)
 
         if self.head is None:
@@ -32,15 +38,14 @@ class LinkedList:
         last_node.next = new_node
 
     def reverse_recursive(self):
-
-        def _reverse_recursive(cur, prev):
+        def _reverse_recursive(cur, prev) -> Node:
             if not cur:
                 return prev
 
             nxt = cur.next
             cur.next = prev
-            prev = cur 
-            cur = nxt 
+            prev = cur
+            cur = nxt
             return _reverse_recursive(cur, prev)
 
         self.head = _reverse_recursive(cur=self.head, prev=None)
@@ -84,5 +89,5 @@ class TestReverseLinkedList(unittest.TestCase):
         self.assertEqual(expected_res, res)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
