@@ -2,7 +2,7 @@
  *   Title: Merge Sort
  *
  *   Problem:
- *      Implement Mergesort on an array
+ *      Implement MergeSort on an array
  *
  *   Execution: javac MergeSort.java && java MergeSort
  */

@@ -2,8 +2,8 @@
  *   Title: Invert a binary tree.
  *
  * Problem:
-    Invert a binary tree.
-
+ *   Invert a binary tree.
+ *
  *   Execution: javac InvertBinaryTree.java && java InvertBinaryTree
  */
 import java.util.*;

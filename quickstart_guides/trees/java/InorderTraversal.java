@@ -2,8 +2,8 @@
  *   Title: In-order traversal of binary tree
  *
  * Problem:
-    Given a binary tree, return the inorder traversal of its nodes' values.
-
+ *   Given a binary tree, return the inorder traversal of its nodes' values.
+ *
  *   Execution: javac InorderTraversal.java && java InorderTraversal
  */
 import java.util.*;

@@ -2,9 +2,9 @@
  *   Title: Find largest number
  *
  *   Problem:
-        Given a list of non negative integers, arrange them such that they form
-        the largest number.
-
+ *       Given a list of non negative integers, arrange them such that they form
+ *       the largest number.
+ *
  *
  *   Execution: javac FindLargestNumber.java && java FindLargestNumber
  */

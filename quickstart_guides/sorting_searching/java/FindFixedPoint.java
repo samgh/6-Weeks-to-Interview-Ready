@@ -27,21 +27,20 @@ class FindFixedPoint
 		if (mid == arr[mid])
 			return mid;
 
-		// Search left
+		// Search left.
 		int leftindex = Math.min(mid - 1, midValue);
 		int left = findFixedPoint(arr, low, leftindex);
 
 		if (left >= 0)
 			return left;
 
-		// Search right
+		// Search right.
 		int rightindex = Math.max(mid + 1, midValue);
 		int right = findFixedPoint(arr, rightindex, high);
 
 		return right;
 	}
 
-	// Driver code
 	public static void main(String[] args)
 	{
 		// input 1

@@ -2,7 +2,7 @@
  *   Title: Quick sort
  *
  *   Problem:
- *   Implement quick sort algorithm.
+ *      Implement quick sort algorithm.
  *
  *   Execution: javac QuickSort.java && java QuickSort
  */
