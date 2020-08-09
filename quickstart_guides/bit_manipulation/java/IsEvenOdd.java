@@ -1,12 +1,12 @@
 /*
-    Title: Is even or odd.
-
-    Problem: 
-        Write a program to determine if a given number is even or odd.
-        Do not make use of the modulus operator.
-
-    Execution: javac IsEvenOdd.java && java IsEvenOdd
- */
+*    Title: Is even or odd.
+*
+*    Problem:
+*        Write a program to determine if a given number is even or odd.
+*        Do not make use of the modulus operator.
+*
+*    Execution: javac IsEvenOdd.java && java IsEvenOdd
+*/
 import java.util.*;
 
 

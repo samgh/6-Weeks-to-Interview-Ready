@@ -1,12 +1,12 @@
 /*
-    Title: Hamming weight.
-
-    Problem: 
-        Write a function that takes an unsigned integer and return the number
-        of '1' bits it has (also known as the Hamming weight).
-
-    Execution: javac HammingWeight.java && java HammingWeight
- */
+*    Title: Hamming weight.
+*
+*    Problem:
+*        Write a function that takes an unsigned integer and return the number
+*        of '1' bits it has (also known as the Hamming weight).
+*
+*    Execution: javac HammingWeight.java && java HammingWeight
+*/
 import java.util.*;
 
 

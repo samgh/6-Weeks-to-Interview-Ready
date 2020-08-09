@@ -1,12 +1,12 @@
 /*
-    Title: Power of four.
-
-    Problem: 
-        Given an integer, write a function to determine if it is a power of
-        four.
-
-    Execution: javac PowerOfFour.java && java PowerOfFour
- */
+*    Title: Power of four.
+*
+*    Problem:
+*        Given an integer, write a function to determine if it is a power of
+*        four.
+*
+*    Execution: javac PowerOfFour.java && java PowerOfFour
+*/
 import java.util.*;
 
 

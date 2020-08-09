@@ -1,12 +1,12 @@
 /*
-    Title: Sum two integers.
-
-    Problem: 
-        Calculate the sum of two integers a and b, but you are not allowed to
-        use the operator + and -.
-
-    Execution: javac SumTwoIntegers.java && java SumTwoIntegers
- */
+*    Title: Sum two integers.
+*
+*    Problem:
+*        Calculate the sum of two integers a and b, but you are not allowed to
+*        use the operator + and -.
+*
+*    Execution: javac SumTwoIntegers.java && java SumTwoIntegers
+*/
 import java.util.*;
 
 
@@ -22,10 +22,10 @@ public class SumTwoInts {
 
 			r |= t;
 
-			// case when both bits 1
+			// Case when both bits 1.
 			if((a & b) != 0) {
 				carry = 1 << ( i + 1);
-			 // case when a's or b's bit 1 and carry 1
+			 // Case when a's or b's bit 1 and carry 1.
 			} else if(carry != 0 && t == 0) {
 				carry = 1 << ( i + 1);
 			} else {

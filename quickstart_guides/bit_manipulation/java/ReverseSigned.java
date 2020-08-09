@@ -1,11 +1,11 @@
 /*
-    Title: Reverse signed.
-
-    Problem: 
-        Reverse bits of a given 32 bits unsigned integer.
-
-    Execution: javac ReverseSigned.java && java ReverseSigned
- */
+*    Title: Reverse signed
+*
+*    Problem:
+*        Reverse bits of a given 32 bits unsigned integer.
+*
+*    Execution: javac ReverseSigned.java && java ReverseSigned
+*/
 import java.util.*;
 
 
@@ -17,10 +17,12 @@ public class ReverseSigned {
 			chs[i] = (char) (((n >> i) & 1) + '0');
 		}
 		String resStr = new String(chs);
-		long total=0; //avoid overflow
+
+        // Avoid overflow.
+		long total=0;
 		char [] binCharArray = resStr.toCharArray();
 
-		// Convert the binary string into an int number
+		// Convert the binary string into an int number.
         for (int i = 0; i < binCharArray.length; i++) {
             total=total+binCharArray[i]-48;
             if(i!=binCharArray.length-1){
