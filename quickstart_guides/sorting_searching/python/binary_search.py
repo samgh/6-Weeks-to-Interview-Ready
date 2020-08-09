@@ -1,6 +1,7 @@
 """
 Title: Binary search
 
+Problem:
     Binary search is a search algorithm that finds the position of a target
     value within a sorted array. Binary search compares the target value to the
     middle element of the array.
@@ -13,6 +14,7 @@ Title: Binary search
 
 Execution: python binary_search.py
 """
+import unittest
 from typing import List
 
 
@@ -41,13 +43,26 @@ def binary_search_recursive(data: List[int], target: int, low: int, high: int) -
         if target == data[mid]:
             return True
         elif target < data[mid]:
-            return binary_search_recursive(data, target, low, mid-1)
+            return binary_search_recursive(data, target, low, mid - 1)
         else:
-            return binary_search_recursive(data, target, mid+1, high)
+            return binary_search_recursive(data, target, mid + 1, high)
 
 
-input_data = [2, 4, 5, 7, 8, 9, 12, 14, 17, 19, 22, 25, 27, 28, 33, 37]
-input_target = 37
+class TestBinarySearch(unittest.TestCase):
+    """Unit tests for binary_search."""
 
-print(binary_search_recursive(input_data, input_target, 0, len(input_data)-1))
-print(binary_search_iterative(input_data, input_target))
+    def test_1(self):
+        data = [2, 4, 5, 7, 8, 9, 12, 37]
+        target = 37
+        self.assertEqual(binary_search_iterative(data, target), True)
+        self.assertEqual(binary_search_recursive(data, target, 0, len(data) - 1), True)
+
+    def test_2(self):
+        data = [2, 4, 5, 7, 8, 9, 12, 37]
+        target = 40
+        self.assertEqual(binary_search_iterative(data, target), False)
+        self.assertEqual(binary_search_recursive(data, target, 0, len(data) - 1), False)
+
+
+if __name__ == "__main__":
+    unittest.main()

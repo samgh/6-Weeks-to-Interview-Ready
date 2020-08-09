@@ -1,6 +1,7 @@
 """
 Title: Merge sort
 
+Problem:
     Implement merge sort.
 
 Execution: python merge_sort.py
@@ -9,7 +10,7 @@ from typing import List
 import unittest
 
 
-def merge_sort(arr: List[int]):
+def merge_sort(arr: List[int]) -> None:
     if len(arr) > 1:
         mid = len(arr) // 2
         left = arr[:mid]
@@ -57,5 +58,5 @@ class TestMergeSort(unittest.TestCase):
         self.assertEqual(expected_arr, input_arr)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

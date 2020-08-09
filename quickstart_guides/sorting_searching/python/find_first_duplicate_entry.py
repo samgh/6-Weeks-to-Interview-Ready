@@ -13,24 +13,25 @@ Problem:
 
 Execution: python find_first_duplicate_entry.py
 """
+from typing import List
 import unittest
 
 
-def find_first_duplicate_entry(A, target):
+def find_first_duplicate_entry(input_list: List[int], target: int) -> int:
     low = 0
-    high = len(A) - 1
+    high = len(input_list) - 1
 
     while low <= high:
         mid = (low + high) // 2
 
-        if A[mid] < target:
+        if input_list[mid] < target:
             low = mid + 1
-        elif A[mid] > target:
+        elif input_list[mid] > target:
             high = mid - 1
         else:
             if mid - 1 < 0:
                 return mid
-            if A[mid - 1] != target:
+            if input_list[mid - 1] != target:
                 return mid
             high = mid - 1
 
@@ -39,11 +40,10 @@ class TestFindFirstDuplicateEntry(unittest.TestCase):
     """Unit tests for find_first_duplicate_entry."""
 
     def test_1(self):
-        A = [-14, -10, 2, 108, 108, 243, 285, 285, 285, 401]
+        input_list = [-14, -10, 2, 108, 108, 243, 285, 285, 285, 401]
         target = 108
-        self.assertEqual(find_first_duplicate_entry(A, target), 3)
+        self.assertEqual(find_first_duplicate_entry(input_list, target), 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

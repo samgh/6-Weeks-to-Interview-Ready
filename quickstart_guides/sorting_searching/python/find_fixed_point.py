@@ -9,41 +9,43 @@ Problem:
 
 Execution: python find_fixed_point.py
 """
+from typing import List, Union
 import unittest
 
 
 # Time Complexity: O(log n)
 # Space Complexity: O(1)
-def find_fixed_point(A):
+def find_fixed_point(input_list: List[int]) -> Union[int, None]:
     low = 0
-    high = len(A) - 1
+    high = len(input_list) - 1
 
     while low <= high:
-        mid = (low + high)//2
+        mid = (low + high) // 2
 
-        if A[mid] < mid:
+        if input_list[mid] < mid:
             low = mid + 1
-        elif A[mid] > mid:
+        elif input_list[mid] > mid:
             high = mid - 1
         else:
-            return A[mid]
+            return input_list[mid]
     return None
+
 
 class TestFindFixedPoint(unittest.TestCase):
     """Unit tests for find_fixed_point."""
 
     def test_1(self):
-        A = [-10, -5, 0, 3, 7]
-        self.assertEqual(find_fixed_point(A), 3)
+        input_list = [-10, -5, 0, 3, 7]
+        self.assertEqual(find_fixed_point(input_list), 3)
 
     def test_2(self):
-        A = [0, 2, 5, 8, 17]
-        self.assertEqual(find_fixed_point(A), 0)
+        input_list = [0, 2, 5, 8, 17]
+        self.assertEqual(find_fixed_point(input_list), 0)
 
     def test_3(self):
-        A = [-10, -5, 3, 4, 7, 9]
-        self.assertEqual(find_fixed_point(A), None)
+        input_list = [-10, -5, 3, 4, 7, 9]
+        self.assertEqual(find_fixed_point(input_list), None)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
