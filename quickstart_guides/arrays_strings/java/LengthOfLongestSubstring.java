@@ -1,7 +1,9 @@
 /*
  *   Title: Longest substring without repeating characters.
  *
- *   Given a string, find the length of the longest substring without repeating characters.
+ *   Problem
+ *      Given a string, find the length of the longest substring without
+ *      repeating characters.
  *
  *   Execution: javac LengthOfLongestSubstring.java && java LengthOfLongestSubstring
  */
@@ -25,7 +27,6 @@ public class LengthOfLongestSubstring {
         return ans;
     }
 
-    // Sample test cases
     public static void main(String[] args) {
         assert lengthOfLongestSubstring("abcabcbb") == 3;
         System.out.println("Explanation: The answer is 'abc', with the length of 3.");

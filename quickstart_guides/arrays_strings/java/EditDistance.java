@@ -1,10 +1,9 @@
 /*
  * Title: Array Combinations
- * Author: Sam Gavis-Hughson
- * Date: 11/20/2017
- * 
- * Given two strings, write a function that determines the minimum edit distance
- * between the two strings. You can insert and modify characters.
+ *
+ * Problem:
+ *  Given two strings, write a function that determines the minimum edit
+ * distance between the two strings. You can insert and modify characters.
  * 
  * eg.
  * editDistance("ABCD", "ACBD") = 2 (ABCD->ACCD->ACBD)
@@ -15,12 +14,12 @@
 
 public class EditDistance {
     
-    // Brute force solution
+    // Brute force solution.
     public static int bruteForceEditDistance(String s1, String s2) {
         return bruteForceEditDistance(s1, s2, 0, 0);
     }
     
-    // Overloaded recursive method
+    // Overloaded recursive method.
     private static int bruteForceEditDistance(String s1, String s2, int i, int j) {
         if (i == s1.length()) return s2.length() - j;
         if (j == s2.length()) return s1.length() - i;
@@ -29,13 +28,13 @@ public class EditDistance {
         int min = bruteForceEditDistance(s1, s2, i+1, j+1);
         if (s1.charAt(i) != s2.charAt(j)) min++;
         
-        // We can insert a character into s1 or s2
+        // We can insert a character into s1 or s2.
         min = Math.min(min, bruteForceEditDistance(s1, s2, i+1, j) + 1);
         min = Math.min(min, bruteForceEditDistance(s1, s2, i, j+1) + 1);
         return min;
     }
     
-    // Top-down dynamic solution
+    // Top-down dynamic solution.
     public static int topDownEditDistance(String s1, String s2) {
         int[][] dp = new int[s1.length() + 1][s2.length() + 1];
         for (int i = 0; i < dp.length; i++) {
@@ -46,8 +45,12 @@ public class EditDistance {
         return topDownEditDistance(s1, s2, 0, 0, dp);
     }
     
-    // Overloaded recursive method
-    private static int topDownEditDistance(String s1, String s2, int i, int j, int[][] dp) {
+    // Overloaded recursive method.
+    private static int topDownEditDistance(String s1,
+                                           String s2,
+                                           int i,
+                                           int j,
+                                           int[][] dp) {
         if (dp[i][j] == -1) {
             if (i == s1.length()) return s2.length() - j;
             if (j == s2.length()) return s1.length() - i;
