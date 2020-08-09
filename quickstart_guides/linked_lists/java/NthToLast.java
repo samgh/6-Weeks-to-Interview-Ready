@@ -1,13 +1,10 @@
 /*
  * Title: Nth-to-last Linked List Element
- * Author: Sam Gavis-Hughson
- * Date: 1/13/2016
- * 
- * Given a linked list, find the nth-to-last value in the list.
+ *
+ * Problem:
+ *  Given a linked list, find the nth-to-last value in the list.
  * 
  * Execution: javac NthToLast.java && java NthToLast
- * 
- * For more details, check out http://www.byte-by-byte.com/nthtolastelement/
  */
 
 public class NthToLast {

@@ -1,8 +1,9 @@
 /*
  *   Title: Merge K sorted list
  *
- *   Problem: Merge k sorted linked lists and return it as one sorted list.
- *   Analyze and describe its complexity.
+ *   Problem:
+ *      Merge k sorted linked lists and return it as one sorted list. Analyze
+ *      and describe its complexity.
  *
  *   Execution: javac MergeKSorted.java && java MergeKSorted
  */

@@ -1,10 +1,11 @@
 /*
  * Title: Merge Sort
-
-    Merge sort is a divide-and-conquer algorithm based on the idea of breaking
-    down a list into several sub-lists until each sublist consists of a single
-    element and merging those sub-lists in a manner that results into a sorted
-    list.
+ *
+ *  Problem:
+ *      Merge sort is a divide-and-conquer algorithm based on the idea of
+ *      breaking down a list into several sub-lists until each sublist consists
+ *      of a single element and merging those sub-lists in a manner that results
+ *      into a sorted list.
  *
  * Execution: javac MergeSort.java && java MergeSort
  *
@@ -12,8 +13,7 @@
 import java.util.Arrays;
 
 class MergeSort {
-    // Merges two subarrays of arr[].
-    // First subarray is arr[l..m]
+    // Merges two subarrays of arr[]. First subarray is arr[l..m]
     // Second subarray is arr[m+1..r]
     void merge(int arr[], int l, int m, int r) {
         // Find sizes of two sub-arrays to be merged

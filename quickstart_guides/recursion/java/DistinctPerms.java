@@ -2,10 +2,10 @@
  *   Title: Distinct perms
  *
  * Problem:
-
-    Returns true if str[curr] does not matches with any of the characters
-    after str[start].
-
+ *
+ *   Returns true if str[curr] does not matches with any of the characters
+ *   after str[start].
+ *
  *   Execution: javac DistinctPerms.java && java DistinctPerms
  */
 import java.util.Arrays;

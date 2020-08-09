@@ -1,7 +1,8 @@
 /*
  * Title: Unique BST
  *
- * Construct all possible BSTs for keys 1 to N.
+ * Problem:
+ *  Construct all possible BSTs for keys 1 to N.
  *
  * Execution: javac UniqueBST.java && java UniqueBST
  *
