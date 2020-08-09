@@ -11,7 +11,7 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -52,5 +52,5 @@ class TestInvertBinaryTree(unittest.TestCase):
         self.assertEqual(t2.right.right.val, 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

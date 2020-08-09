@@ -16,7 +16,7 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -63,5 +63,5 @@ class TestMergeBinaryTrees(unittest.TestCase):
         self.assertEqual(tr.right.right.val, 7)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

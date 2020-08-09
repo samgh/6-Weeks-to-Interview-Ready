@@ -17,23 +17,23 @@ import unittest
 
 
 class Node:
-    def __init__(self, data=None):
+    def __init__(self, data=None) -> None:
         self.data = data
         self.left = None
         self.right = None
 
 
 class BST:
-    def __init__(self):
+    def __init__(self) -> None:
         self.root = None
 
-    def insert(self, data):
+    def insert(self, data: int) -> None:
         if self.root is None:
             self.root = Node(data)
         else:
             self._insert(data, self.root)
 
-    def _insert(self, data, cur_node):
+    def _insert(self, data: int, cur_node: Node) -> None:
         if data < cur_node.data:
             if cur_node.left is None:
                 cur_node.left = Node(data)
@@ -50,7 +50,7 @@ class BST:
         else:
             print("Value already in tree!")
 
-    def lca(self, data_1, data_2):
+    def lca(self, data_1: int, data_2: int) -> int:
         x = max(data_1, data_2)
         y = min(data_1, data_2)
 
@@ -81,7 +81,5 @@ class TestMaxDepthBinaryTree(unittest.TestCase):
         self.assertEqual((bst.lca(1, 6)), 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

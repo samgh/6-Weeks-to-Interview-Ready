@@ -19,9 +19,6 @@ class TreeNode:
         self.right = right
 
 
-ans = 1
-
-
 def _diam(node: TreeNode, depth: int) -> [int, int]:
     if node is None:
         return depth, 0

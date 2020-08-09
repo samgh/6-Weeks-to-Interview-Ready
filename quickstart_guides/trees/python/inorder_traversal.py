@@ -1,5 +1,5 @@
 """
-Title: Inorder traversal
+Title: In-order traversal
 
 Problem:
     Given a binary tree, return the inorder traversal of its nodes' values.
@@ -11,13 +11,14 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
 
 
 def inorder_traversal(root: TreeNode) -> List[int]:
+    """Perform in-order traversal."""
 
     def traverse(root, out, visited):
         if root:
@@ -41,5 +42,5 @@ class TestInorderTraversal(unittest.TestCase):
         self.assertEqual(inorder_traversal(tn), [1, 3, 2])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
