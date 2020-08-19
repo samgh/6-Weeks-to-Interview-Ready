@@ -15,7 +15,9 @@ import unittest
 
 
 def is_palindrome(s: str) -> bool:
-    s = s.lower().replace(" ", "").translate(str.maketrans('', '', string.punctuation))
+    s = s.lower().replace(" ", "").translate(str.maketrans("",
+                                                           "",
+                                                           string.punctuation))
     return True if s[::-1] == s else False
 
 
@@ -28,5 +30,6 @@ class TestIsPalindrome(unittest.TestCase):
     def test_2(self):
         self.assertEqual(is_palindrome("race a car"), False)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -11,13 +11,13 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
 
 
-def flatten(root):
+def flatten(root: TreeNode) -> None:
     """
     :type root: TreeNode
     :rtype: None Do not return anything, modify root in-place instead.
@@ -26,7 +26,7 @@ def flatten(root):
         return
     stack = []
 
-    def flatten_helper(root):
+    def flatten_helper(root: TreeNode) -> None:
         if not root:
             return
         stack.append(root)
@@ -35,10 +35,11 @@ def flatten(root):
             flatten_helper(root.left)
         if root.right:
             flatten_helper(root.right)
+
     flatten_helper(root)
-    for i in range(len(stack)-1):
+    for i in range(len(stack) - 1):
         stack[i].left = None
-        stack[i].right = stack[i+1]
+        stack[i].right = stack[i + 1]
     stack[-1].left = None
     stack[-1].right = None
 
@@ -59,5 +60,5 @@ class TestTreeToList(unittest.TestCase):
         self.assertEqual(tn.right.right.val, 3)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -1,7 +1,8 @@
 """
 Title: Unique BST.
 
-Construct all possible BSTs for keys 1 to N.
+Problem:
+    Construct all possible BSTs for keys 1 to N.
 
 Execution: python unique_bst.py
 """
@@ -16,15 +17,15 @@ class Node:
         self.right = None
 
 
-def preorder(root, l):
+def preorder(root, lst: List[int]) -> List[int]:
     if root:
-        l.append(root.key)
-        preorder(root.left, l)
-        preorder(root.right, l)
-    return l
+        lst.append(root.key)
+        preorder(root.left, lst)
+        preorder(root.right, lst)
+    return lst
 
 
-def construct_trees(start, end):
+def construct_trees(start: int, end: int) -> List[Any]:
     node_list = []
 
     # If start > end, then subtree will be empty, so return None in the list.
@@ -32,8 +33,8 @@ def construct_trees(start, end):
         node_list.append(None)
         return node_list
 
-    # Iterate through all values from start to end for
-    # constructing left and right subtree.
+    # Iterate through all values from start to end for constructing left and
+    # right subtree.
     for i in range(start, end + 1):
 
         # Construct left subtree.
@@ -58,11 +59,7 @@ class TestUniqueBST(unittest.TestCase):
     """Unit tests for unique_bst."""
 
     def test_1(self):
-        expected_out = [[1, 2, 3],
-                        [1, 3, 2],
-                        [2, 1, 3],
-                        [3, 1, 2],
-                        [3, 2, 1]]
+        expected_out = [[1, 2, 3], [1, 3, 2], [2, 1, 3], [3, 1, 2], [3, 2, 1]]
 
         total_trees = construct_trees(1, 3)
 
@@ -73,4 +70,3 @@ class TestUniqueBST(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

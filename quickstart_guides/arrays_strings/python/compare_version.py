@@ -25,12 +25,12 @@ import unittest
 
 
 def compare_version(version1: str, version2: str) -> int:
-    v1 = version1.split('.')
-    v2 = version2.split('.')
-    v = max(len(v1),len(v2))
-    v1 = (v1 + ['0'] * v)[:v]
+    v1 = version1.split(".")
+    v2 = version2.split(".")
+    v = max(len(v1), len(v2))
+    v1 = (v1 + ["0"] * v)[:v]
     v2 = (v2 + [0] * v)[:v]
-    for i in range (0,v):
+    for i in range(0, v):
         if int(v1[i]) > int(v2[i]):
             return 1
         elif int(v1[i]) < int(v2[i]):
@@ -51,7 +51,7 @@ class TestCompareVersion(unittest.TestCase):
 
     def test_3(self):
         self.assertEqual(compare_version("7.5.2.4", "7.5.3"), -1)
-        
+
     def test_4(self):
         self.assertEqual(compare_version("1.01", "1.001"), 0)
 
@@ -59,5 +59,5 @@ class TestCompareVersion(unittest.TestCase):
         self.assertEqual(compare_version("1.0", "1.0.0"), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

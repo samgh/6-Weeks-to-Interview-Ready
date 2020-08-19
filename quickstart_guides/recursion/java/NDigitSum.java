@@ -2,11 +2,11 @@
  *   Title: N-digit Sum
  *
  * Problem:
-
-    Recursive function to count 'n' digit  numbers with sum of digits as 'sum'
-    This function considers leading 0's  also as digits, that is why not
-    directly called.
-
+ *
+ *   Recursive function to count 'n' digit  numbers with sum of digits as 'sum'
+ *   This function considers leading 0's  also as digits, that is why not
+ *   directly called.
+ *
  *   Execution: javac NDigitSum.java && java NDigitSum
  */
 import java.util.Arrays;

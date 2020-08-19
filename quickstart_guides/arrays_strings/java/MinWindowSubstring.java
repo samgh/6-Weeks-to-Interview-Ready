@@ -1,9 +1,10 @@
 /*
  *   Title: Minimum window substring
+ *
  *   Problem:
-         Given a string S and a string T, find the minimum window in S which
-         will contain all the characters in T in complexity O(n).
-
+ *        Given a string S and a string T, find the minimum window in S which
+ *        will contain all the characters in T in complexity O(n).
+ *
  *   Execution: javac MinWindowSubstring.java && java MinWindowSubstring
  */
 import java.util.*;

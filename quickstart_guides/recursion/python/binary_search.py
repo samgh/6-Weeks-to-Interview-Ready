@@ -1,6 +1,7 @@
 """
 Title: Binary search
 
+Problem:
     Binary search is a search algorithm that finds the position of a target
     value within a sorted array. Binary search compares the target value to the
     middle element of the array.
@@ -26,9 +27,9 @@ def binary_search(data: List[Any], target: int, low: int, high: int) -> bool:
         if target == data[mid]:
             return True
         elif target < data[mid]:
-            return binary_search(data, target, low, mid-1)
+            return binary_search(data, target, low, mid - 1)
         else:
-            return binary_search(data, target, mid+1, high)
+            return binary_search(data, target, mid + 1, high)
 
 
 class TestBinarySearch(unittest.TestCase):
@@ -37,13 +38,13 @@ class TestBinarySearch(unittest.TestCase):
     def test_1(self):
         data = [2, 4, 5, 7, 8, 9, 12, 37]
         target = 37
-        self.assertEqual(binary_search(data, target, 0, len(data)-1), True)
+        self.assertEqual(binary_search(data, target, 0, len(data) - 1), True)
 
     def test_2(self):
         data = [2, 4, 5, 7, 8, 9, 12, 37]
         target = 40
-        self.assertEqual(binary_search(data, target, 0, len(data)-1), False)
+        self.assertEqual(binary_search(data, target, 0, len(data) - 1), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

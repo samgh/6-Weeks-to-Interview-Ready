@@ -1,16 +1,18 @@
 /*
  *   Title: Regex matching
+ *
  *   Problem:
-        Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
-
-        '.' Matches any single character.
-        '*' Matches zero or more of the preceding element.
-        The matching should cover the entire input string (not partial).
-
-        Note:
-
-        s could be empty and contains only lowercase letters a-z.
-        p could be empty and contains only lowercase letters a-z, and characters like . or *.
+ *       Given an input string (s) and a pattern (p), implement regular
+ *       expression matching with support for '.' and '*'.
+ *
+ *       '.' Matches any single character.
+ *       '*' Matches zero or more of the preceding element.
+ *       The matching should cover the entire input string (not partial).
+ *
+ *       Note:
+ *
+ *       s could be empty and contains only lowercase letters a-z.
+ *       p could be empty and contains only lowercase letters a-z, and characters like . or *.
  *
  *   Execution: javac RegexMatching.java && java RegexMatching
  */
@@ -69,8 +71,6 @@ public class RegexMatching {
         }
         return dp[0][0];
     }
-
-    // Sample test cases
     public static void main(String[] args) {
         assert regexMatchingTopDown("aa", "a") == false;
         assert regexMatchingBottomUp("aa", "a") == false;

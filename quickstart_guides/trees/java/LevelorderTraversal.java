@@ -2,8 +2,8 @@
  *   Title: Level-order traversal of binary tree
  *
  * Problem:
-    Given a binary tree, return the level-order traversal of its nodes' values.
-
+ *   Given a binary tree, return the level-order traversal of its nodes' values.
+ *
  *   Execution: javac LevelorderTraversal.java && java LevelorderTraversal
  */
 import java.util.*;

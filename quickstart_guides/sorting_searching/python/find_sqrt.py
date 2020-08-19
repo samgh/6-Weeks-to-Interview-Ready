@@ -1,5 +1,7 @@
 """
 Title: Square root.
+
+Problem:
     Implement int sqrt(int x).
 
     Compute and return the square root of x, where x is guaranteed to be a
@@ -15,7 +17,6 @@ import unittest
 
 def find_sqrt(x: int) -> int:
     guess = x
-
     epsilon = 10 ** (-4)
 
     while abs(x - guess * guess) > epsilon:
@@ -34,5 +35,5 @@ class TestFindSqrt(unittest.TestCase):
         self.assertEqual(find_sqrt(16), 4)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

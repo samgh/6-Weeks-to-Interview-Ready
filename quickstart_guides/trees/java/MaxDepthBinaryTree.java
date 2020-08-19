@@ -2,9 +2,9 @@
  *   Title: Max depth binary tree
  *
  * Problem:
-     Given a binary tree, find height of it. Height of empty tree is 0 and
-     height of below tree is 3.
-
+ *    Given a binary tree, find height of it. Height of empty tree is 0 and
+ *    height of below tree is 3.
+ *
  *   Execution: javac MaxDepthBinaryTree.java && java MaxDepthBinaryTree
  */
 

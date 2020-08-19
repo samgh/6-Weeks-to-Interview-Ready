@@ -2,8 +2,8 @@
 Title: Merge k lists.
 
 Problem:
-    Merge k sorted linked lists and return it as one sorted list. Analyze
-    and describe its complexity.
+    Merge k sorted linked lists and return it as one sorted list. Analyze and
+    describe its complexity.
 
 Execution: python merge_k_lists.py
 """
@@ -13,6 +13,7 @@ from typing import List
 
 class ListNode:
     """Class for Linked List node."""
+
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -73,5 +74,5 @@ class TestMergeKLists(unittest.TestCase):
         self.assertEqual(check_list_equal(out_list, expected_out), True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

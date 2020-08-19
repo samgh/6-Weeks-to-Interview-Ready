@@ -11,7 +11,7 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -24,13 +24,13 @@ def helper_util(lst, rst, result, level):
 
     # Keep tracking the left sub tree
     if lst is not None:
-        result[level-1].extend([lst.val])
-        helper_util(lst.left, lst.right, result, level+1)
+        result[level - 1].extend([lst.val])
+        helper_util(lst.left, lst.right, result, level + 1)
 
     # Keep tracking the right sub tree
     if rst is not None:
-        result[level-1].extend([rst.val])
-        helper_util(rst.left, rst.right, result, level+1)
+        result[level - 1].extend([rst.val])
+        helper_util(rst.left, rst.right, result, level + 1)
 
     return result
 
@@ -63,6 +63,5 @@ class TestLevelorderTraversal(unittest.TestCase):
         self.assertEqual(levelorder_traversal(tn), [[3], [9, 20], [15, 7]])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

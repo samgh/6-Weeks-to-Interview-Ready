@@ -2,8 +2,8 @@
  *   Title: Is Anagram
  *
  *   Problem:
- *   Given two strings s and t , write a function to determine if t is an
- *   anagram of s.
+ *      Given two strings s and t , write a function to determine if t is an
+ *      anagram of s.
  *
  *   Execution: javac IsAnagram.java && java IsAnagram
  */

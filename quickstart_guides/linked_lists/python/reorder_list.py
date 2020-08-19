@@ -1,11 +1,12 @@
 """
 Title: Reorder list.
 
-Given a singly linked list L: L0→L1→…→Ln-1→Ln,
-reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+Problem:
+    Given a singly linked list L: L0→L1→…→Ln-1→Ln, reorder it to:
+    L0→Ln→L1→Ln-1→L2→Ln-2→….
 
-You may not modify the values in the list's nodes, only nodes itself may be
-changed.
+    You may not modify the values in the list's nodes, only nodes itself may be
+    changed.
 
 Execution: python reorder_list.py
 """
@@ -21,6 +22,7 @@ class ListNode:
 
 
 def reorder_list(head: ListNode) -> None:
+    """Reorder linked list."""
     if head is None:
         return None
 
@@ -64,5 +66,5 @@ class TestReverseList(unittest.TestCase):
         reorder_list(input_1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

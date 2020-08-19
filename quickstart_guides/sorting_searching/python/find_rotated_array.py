@@ -20,7 +20,7 @@ from typing import List
 import unittest
 
 
-def binary(nums, i, j, target):
+def binary(nums: List[int], i: int, j: int, target: int) -> int:
     if j - i == 0:
         return i if nums[i] == target else -1
 
@@ -60,7 +60,6 @@ def binary(nums, i, j, target):
 def find_rotated_array(nums: List[int], target: int) -> int:
     if len(nums) < 1:
         return -1
-
     return binary(nums, 0, len(nums) - 1, target)
 
 
@@ -78,5 +77,5 @@ class TestFindRotatedArray(unittest.TestCase):
         self.assertEqual(find_rotated_array(nums, target), -1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

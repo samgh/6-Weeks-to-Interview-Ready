@@ -1,12 +1,12 @@
 /*
-    Title: Power of two.
-
-    Problem: 
-        Given an integer, write a function to determine if it is a power of
-        two.
-
-    Execution: javac PowerOfTwo.java && java PowerOfTwo
- */
+*    Title: Power of two.
+*
+*    Problem:
+*        Given an integer, write a function to determine if it is a power of
+*        two.
+*
+*    Execution: javac PowerOfTwo.java && java PowerOfTwo
+*/
 import java.util.*;
 
 
@@ -15,7 +15,9 @@ public class PowerOfTwo {
         int powerOfTwo = 2;
         if(n==1 || n==2)
             return true;
-        if(n%2==1) //checking for odd numbers
+
+        // Checking for odd numbers.
+        if(n % 2 == 1)
             return false;
         while(powerOfTwo<=n/2) {
             powerOfTwo=powerOfTwo*2;

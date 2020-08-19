@@ -1,7 +1,8 @@
 /*
  *   Title: Reverse List.
  *
- *   Problem: Reverse a singly linked list.
+ *   Problem:
+ *      Reverse a singly linked list.
  *
  *   Execution: javac ReverseList.java && java ReverseList
  */

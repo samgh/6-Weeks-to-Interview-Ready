@@ -2,9 +2,8 @@
  *   Title: Interleaving strings
  *
  * Problem:
-
-    Check whether a string interleaves with two other strings.
-
+ *   Check whether a string interleaves with two other strings.
+ *
  *   Execution: javac InterleavingStrings.java && java InterleavingStrings
  */
 import java.util.Arrays;
@@ -12,8 +11,7 @@ import java.util.Arrays;
 
 public class InterleavingStrings {
 
-    // Returns true if C is an interleaving
-    // of A and B, otherwise returns false
+    // Returns true if C is an interleaving of A and B, otherwise returns false.
     static boolean isInterleaved (String A, String B, String C)
     {
         int i = 0, j = 0, k = 0;
@@ -40,9 +38,8 @@ public class InterleavingStrings {
             k++;
         }
 
-        // If A or B still have some characters,
-        // then length of C is smaller than sum
-        // of lengths of A and B, so return false
+        // If A or B still have some characters, then length of C is smaller
+        // than sum of lengths of A and B, so return false.
         if (i < A.length() || j < B.length())
             return false;
 

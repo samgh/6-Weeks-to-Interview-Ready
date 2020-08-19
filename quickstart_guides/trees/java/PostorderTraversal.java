@@ -2,8 +2,8 @@
  *   Title: Post-order traversal of binary tree
  *
  * Problem:
-    Given a binary tree, return the postorder traversal of its nodes' values.
-
+ *   Given a binary tree, return the postorder traversal of its nodes' values.
+ *
  *   Execution: javac PostorderTraversal.java && java PostorderTraversal
  */
 import java.util.*;

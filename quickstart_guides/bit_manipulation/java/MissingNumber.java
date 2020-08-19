@@ -1,12 +1,12 @@
 /*
-    Title: Missing number
-
-    Problem: 
-        Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
-        find the one that is missing from the array.
-
-    Execution: javac MissingNumber.java && java MissingNumber
- */
+*    Title: Missing number
+*
+*    Problem:
+*        Given an array containing n distinct numbers taken from 0, 1, 2, ..., n,
+*        find the one that is missing from the array.
+*
+*    Execution: javac MissingNumber.java && java MissingNumber
+*/
 import java.util.*;
 
 

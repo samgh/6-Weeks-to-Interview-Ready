@@ -1,7 +1,8 @@
 """
 Title: Reverse linked list.
 
-Problem: Reverse a singly linked list.
+Problem:
+    Reverse a singly linked list.
 
 Execution: python reverse_list.py
 """
@@ -10,7 +11,6 @@ import unittest
 
 class ListNode:
     """Basic node class for linked list."""
-
     def __init__(self, x):
         self.val = x
         self.next = None
@@ -63,5 +63,5 @@ class TestReverseList(unittest.TestCase):
         self.assertEqual(list_output_iterative_1, [5, 4, 3, 2, 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

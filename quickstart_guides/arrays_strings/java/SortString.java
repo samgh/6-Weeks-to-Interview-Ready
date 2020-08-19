@@ -19,6 +19,7 @@ public class SortString {
 
     public static void main(String[] args) {
         assert sortString("bbccdefbbaa") == "aabbbbccdef";
+        assert sortString("cba") == "abc";
         System.out.println("Passed all test cases");
     }
 }

@@ -1,9 +1,11 @@
 /*
  *   Title: Longest substring without repeating characters.
-     Problem:
-        Given two strings, write a function that returns the longest common substring.
-        e.g.
-        longestSubstring("ABAB", "BABA") = "ABA"
+ *
+ *    Problem:
+ *       Given two strings, write a function that returns the longest common substring.
+ *       e.g.
+ *
+ *       longestSubstring("ABAB", "BABA") = "ABA"
  *
  *   Execution: javac LongestSubstring.java && java LongestSubstring
  */
@@ -34,12 +36,9 @@ public class LongestSubstring {
         }
         return out;
     }
-
-    // Sample test cases
     public static void main(String[] args) {
         assert longestSubstring("ABAB", "BABA") == "ABA";
 
         System.out.println("Passed all test cases");
     }
-    
 }

@@ -11,7 +11,7 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -37,17 +37,6 @@ def preorder_traversal(root: TreeNode) -> List[int]:
         stack.pop()
     return out
 
-    def traverse(root, out, visited):
-        if root:
-            out = traverse(root.left, out, visited)
-            if root not in visited:
-                visited.append(root)
-                out.append(root.val)
-            out = traverse(root.right, out, visited)
-        return out
-
-    return traverse(root, [], [])
-
 
 class TestPreorderTraversal(unittest.TestCase):
     """Unit tests for preorder_traversal."""
@@ -59,5 +48,5 @@ class TestPreorderTraversal(unittest.TestCase):
         self.assertEqual(preorder_traversal(tn), [1, 2, 3])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

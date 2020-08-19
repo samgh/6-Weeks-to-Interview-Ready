@@ -11,7 +11,7 @@ import unittest
 
 
 def sort_string(s: str) -> str:
-    return ''.join(sorted(s))
+    return "".join(sorted(s))
 
 
 class TestSortString(unittest.TestCase):
@@ -22,6 +22,5 @@ class TestSortString(unittest.TestCase):
         self.assertEqual(sort_string(s), "aabbbbccdef")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

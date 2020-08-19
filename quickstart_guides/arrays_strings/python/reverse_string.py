@@ -40,5 +40,5 @@ class TestReverseString(unittest.TestCase):
         self.assertEqual(reverse_string(test_input), expected_output)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

@@ -7,7 +7,6 @@ Problem:
 
 Execution: python is_even_odd.py
 """
-from typing import List
 import unittest
 
 
@@ -27,7 +26,12 @@ class TestIsEvenOdd(unittest.TestCase):
     def test_2(self):
         self.assertEqual(is_even_odd(25), "Odd")
 
+    def test_3(self):
+        self.assertEqual(is_even_odd(-5), "Odd")
 
-if __name__ == '__main__':
+    def test_4(self):
+        self.assertEqual(is_even_odd(-2), "Even")
+
+
+if __name__ == "__main__":
     unittest.main()
-

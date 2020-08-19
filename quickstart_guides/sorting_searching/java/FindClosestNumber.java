@@ -2,8 +2,9 @@
  *   Title: Find closest number
  *
  *   Problem:
- *   Given an array of sorted integers. We need to find the closest value to
- *   the given number. Array may contain duplicate values and negative numbers.
+ *      Given an array of sorted integers. We need to find the closest value to
+ *      the given number. Array may contain duplicate values and negative
+ *      numbers.
  *
  *   Execution: javac FindClosestNumber.java && java FindClosestNumber
  */
@@ -60,11 +61,9 @@ class FindClosestNumber {
         return arr[mid]; 
     } 
   
-    // Method to compare which one is the more close 
-    // We find the closest by taking the difference 
-    //  between the target and both values. It assumes 
-    // that val2 is greater than val1 and target lies 
-    // between these two. 
+    // Method to compare which one is the more close. We find the closest by
+    // taking the difference between the target and both values. It assumes
+    // that val2 is greater than val1 and target lies between these two.
     public static int getClosest(int val1, int val2,  
                                          int target) 
     { 
@@ -74,8 +73,7 @@ class FindClosestNumber {
             return val1;         
     } 
   
-    // Driver code 
-    public static void main(String[] args) 
+    public static void main(String[] args)
     { 
         int arr[] = { 1, 2, 4, 5, 6, 6, 8, 9 }; 
         assert findClosestNumber(arr, 11) == 9;

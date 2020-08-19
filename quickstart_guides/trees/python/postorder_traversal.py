@@ -1,8 +1,8 @@
 """
-Title: Postorder traversal
+Title: Post-order traversal
 
 Problem:
-    Given a binary tree, return the postorder traversal of its nodes' values.
+    Given a binary tree, return the post-order traversal of its nodes' values.
 
 Execution: python postorder_traversal.py
 """
@@ -11,7 +11,7 @@ import unittest
 
 
 class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
@@ -23,10 +23,10 @@ def postorder_traversal(root: TreeNode) -> List[int]:
         node, visited = stack.pop()
         if node:
             if visited:
-                # add to result if visited
+                # Add to result if visited.
                 res.append(node.val)
             else:
-                # post-order
+                # Post-order traverse.
                 stack.append((node, True))
                 stack.append((node.right, False))
                 stack.append((node.left, False))
@@ -43,5 +43,5 @@ class TestPostorderTraversal(unittest.TestCase):
         self.assertEqual(postorder_traversal(tn), [3, 2, 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

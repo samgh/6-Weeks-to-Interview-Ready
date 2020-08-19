@@ -24,9 +24,10 @@ def missing_number_sorting(nums: List[int]) -> int:
 
     # If we get here, then the missing number is on the range (0, n)
     for i in range(1, len(nums)):
-        expected_num = nums[i-1] + 1
+        expected_num = nums[i - 1] + 1
         if nums[i] != expected_num:
             return expected_num
+
 
 def missing_number_hash_set(nums: List[int]) -> int:
     """Function for calculating the missing number using sorting."""
@@ -36,12 +37,14 @@ def missing_number_hash_set(nums: List[int]) -> int:
         if number not in num_set:
             return number
 
+
 def missing_number_bit_manip(nums: List[int]) -> int:
     """Function for calculating the missing number using sorting."""
     missing = len(nums)
     for i, num in enumerate(nums):
         missing ^= i ^ num
     return missing
+
 
 class TestHammingDistance(unittest.TestCase):
     """Unit test for hamming_distance."""
@@ -58,6 +61,6 @@ class TestHammingDistance(unittest.TestCase):
         self.assertEqual(missing_number_hash_set(input_list), 8)
         self.assertEqual(missing_number_bit_manip(input_list), 8)
 
-if __name__ == '__main__':
-    unittest.main()
 
+if __name__ == "__main__":
+    unittest.main()

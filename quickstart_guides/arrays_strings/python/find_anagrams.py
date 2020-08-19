@@ -24,7 +24,7 @@ def find_anagrams(s: str, p: str) -> List[int]:
     result = []
 
     for i in range(len(s)):
-        
+
         # If index  >= length of the pattern.  then decrement the count of the
         # (i - len_p)th character to remove it from the current (sliding)
         # window.
@@ -32,11 +32,11 @@ def find_anagrams(s: str, p: str) -> List[int]:
             running_counter[s[i - len_p]] -= 1
 
             if running_counter[s[i - len_p]] == 0:
-                del running_counter[s[i  - len_p]]
-        
+                del running_counter[s[i - len_p]]
+
         # Default: just increment the count of the current character.
         running_counter[s[i]] += 1
-        
+
         # At any time, if running_counter == pattern_counter then append the
         # result.
         if running_counter == pattern_counter:
@@ -55,5 +55,5 @@ class TestCompareVersion(unittest.TestCase):
         self.assertEqual(find_anagrams("abab", "ab"), [0, 1, 2])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

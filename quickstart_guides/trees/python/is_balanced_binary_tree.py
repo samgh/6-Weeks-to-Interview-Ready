@@ -14,25 +14,25 @@ Execution: python is_balanced_binary_tree.py
 import unittest
 
 
-class TreeNode(object):
-    def __init__(self, val=0, left=None, right=None):
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None) -> None:
         self.val = val
         self.left = left
         self.right = right
 
 
-def is_balanced_binary_tree(root):
+def is_balanced_binary_tree(root: TreeNode) -> bool:
     """
     :type root: TreeNode
     :rtype: bool
     """
 
-    def height(node):
+    def height(node: TreeNode) -> int:
         if not node:
             return 0
         return 1 + max(height(node.left), height(node.right))
 
-    def dfs(node):
+    def dfs(node: TreeNode) -> bool:
         if not node:
             return True
         left = height(node.left)
@@ -41,7 +41,7 @@ def is_balanced_binary_tree(root):
             return False
         return dfs(node.left) and dfs(node.right)
 
-    def dfs2(node):
+    def dfs2(node: TreeNode) -> int:
         if not node:
             return 0
         left = dfs2(node.left)
@@ -79,7 +79,5 @@ class TestIsBalancedBinaryTree(unittest.TestCase):
         self.assertEqual(is_balanced_binary_tree(tn), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-
-

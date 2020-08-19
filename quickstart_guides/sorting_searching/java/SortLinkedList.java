@@ -19,7 +19,7 @@ class Node
 
 class SortLinkedList
 {
-	// Helper function to print given linked list
+	// Helper function to print given linked list.
 	public static void printList(Node head)
 	{
 		Node ptr = head;
@@ -33,7 +33,7 @@ class SortLinkedList
 	}
 
 	// Takes two lists sorted in increasing order, and merge their nodes
-	// together to make one big sorted list which is returned
+	// together to make one big sorted list which is returned.
 	public static Node SortedMerge(Node a, Node b)
 	{
 		// Base cases

@@ -16,22 +16,23 @@ Problem:
 
 Execution: python regex_matching.py
 """
-from collections import defaultdict
+from typing import Dict
 import unittest
 
 
-def regex_matching_top_down(text: str, pattern: str) -> bool:
-    memo = {}
-    def dp(i, j):
+def regex_matching_top_down(text: str, pattern: str) -> Dict[int, int]:
+    memo = dict()
+
+    def dp(i, j) -> Dict[int, int]:
         if (i, j) not in memo:
             if j == len(pattern):
                 ans = i == len(text)
             else:
-                first_match = i < len(text) and pattern[j] in {text[i], '.'}
-                if j+1 < len(pattern) and pattern[j+1] == '*':
-                    ans = dp(i, j+2) or first_match and dp(i+1, j)
+                first_match = i < len(text) and pattern[j] in {text[i], "."}
+                if j + 1 < len(pattern) and pattern[j + 1] == "*":
+                    ans = dp(i, j + 2) or first_match and dp(i + 1, j)
                 else:
-                    ans = first_match and dp(i+1, j+1)
+                    ans = first_match and dp(i + 1, j + 1)
 
             memo[i, j] = ans
         return memo[i, j]
@@ -45,11 +46,11 @@ def regex_matching_bottom_up(text: str, pattern: str) -> bool:
     dp[-1][-1] = True
     for i in range(len(text), -1, -1):
         for j in range(len(pattern) - 1, -1, -1):
-            first_match = i < len(text) and pattern[j] in {text[i], '.'}
-            if j+1 < len(pattern) and pattern[j+1] == '*':
-                dp[i][j] = dp[i][j+2] or first_match and dp[i+1][j]
+            first_match = i < len(text) and pattern[j] in {text[i], "."}
+            if j + 1 < len(pattern) and pattern[j + 1] == "*":
+                dp[i][j] = dp[i][j + 2] or first_match and dp[i + 1][j]
             else:
-                dp[i][j] = first_match and dp[i+1][j+1]
+                dp[i][j] = first_match and dp[i + 1][j + 1]
 
     return dp[0][0]
 
@@ -88,6 +89,5 @@ class TestRegexMatching(unittest.TestCase):
         self.assertEqual(regex_matching_bottom_up(a, p), False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
-

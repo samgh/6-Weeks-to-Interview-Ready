@@ -2,8 +2,8 @@
  *   Title: Pre-order traversal of binary tree
  *
  * Problem:
-    Given a binary tree, return the preorder traversal of its nodes' values.
-
+ *   Given a binary tree, return the preorder traversal of its nodes' values.
+ *
  *   Execution: javac PreorderTraversal.java && java PreorderTraversal
  */
 import java.util.*;

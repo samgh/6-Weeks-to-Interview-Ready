@@ -1,14 +1,14 @@
 /*
-    Title: Calculate the Hamming distance.
-
-    Problem: 
-        The Hamming distance between two integers is the number of positions
-        at which the corresponding bits are different.
-
-        Now your job is to find the total Hamming distance between all pairs of the
-        given numbers.
-    Execution: javac HammingDistance.java && java HammingDistance
- */
+*    Title: Calculate the Hamming distance.
+*
+*    Problem:
+*        The Hamming distance between two integers is the number of positions
+*        at which the corresponding bits are different.
+*
+*        Now your job is to find the total Hamming distance between all pairs of the
+*        given numbers.
+*    Execution: javac HammingDistance.java && java HammingDistance
+*/
 
 
 public class HammingDistance {
