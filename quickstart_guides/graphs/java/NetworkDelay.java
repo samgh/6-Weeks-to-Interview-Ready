@@ -27,9 +27,7 @@ public class NetworkDelay {
                 graph.put(edge[0], new ArrayList<int[]>());
             graph.get(edge[0]).add(new int[]{edge[2], edge[1]});
         }
-        for (int node: graph.keySet()) {
-            Collections.sort(graph.get(node), (a, b) -> a[0] - b[0]);
-        }
+
         dist = new HashMap();
         for (int node = 1; node <= N; ++node)
             dist.put(node, Integer.MAX_VALUE);
