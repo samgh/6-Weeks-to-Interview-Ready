@@ -6,10 +6,11 @@
  *   Execution: javac LengthOfLongestSubstring && java LengthOfLongestSubstring
  */
 
-import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LengthOfLongestSubstring {
-    public static long lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
 
         // Current index of character.
@@ -25,8 +26,29 @@ public class LengthOfLongestSubstring {
         return ans;
     }
 
+    // Code that directly mirrors the video solution
+    public static int lengthOfLongestSubstringAlt(String s) {
+      Set<Character> inSubstring = new HashSet<Character>();
+
+      int maxLength = 0;
+
+      int i = 0;
+      for (int j = 0; j < s.length(); j++) {
+        char c = s.charAt(j);
+        while (inSubstring.contains(c)) {
+          inSubstring.remove(s.charAt(i));
+          i++;
+        }
+        inSubstring.add(c);
+        maxLength = Math.max(maxLength, j-i+1);
+      }
+
+      return maxLength;
+    }
+
     // Sample test cases
     public static void main(String[] args) {
+      System.out.println(lengthOfLongestSubstring("abcabcbb"));
         assert lengthOfLongestSubstring("abcabcbb") == 3;
         System.out.println("Explanation: The answer is 'abc', with the length of 3.");
 
@@ -38,5 +60,5 @@ public class LengthOfLongestSubstring {
 
         System.out.println("Passed all test cases");
     }
-    
+
 }
