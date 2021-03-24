@@ -7,8 +7,22 @@ Execution: python length_of_longest_substring.py
 """
 import unittest
 
-
 def length_of_longest_substring(s: str):
+    in_substring = set()
+    max_length = 0
+
+    i = 0
+    for j in range(len(s)):
+        while s[j] in in_substring:
+            in_substring.remove(s[i])
+            i = i+1
+        in_substring.add(s[j])
+        max_length = max(max_length, j-i+1)
+
+    return max_length
+
+# An alternative approach
+def length_of_longest_substring_alt(s: str):
     """Given a string, determine the length of the longest substring."""
     last, res, st = dict(), 0, 0
     for i, v in enumerate(s):
@@ -18,7 +32,6 @@ def length_of_longest_substring(s: str):
             st = last[v] + 1
         last[v] = i
     return res
-
 
 class TestLengthOfLongestSubstring(unittest.TestCase):
     """Unit tests for length_of_longest_substring."""

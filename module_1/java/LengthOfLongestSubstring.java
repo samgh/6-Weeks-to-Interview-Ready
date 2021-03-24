@@ -10,24 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LengthOfLongestSubstring {
+
     public static int lengthOfLongestSubstring(String s) {
-        int n = s.length(), ans = 0;
-
-        // Current index of character.
-        int[] index = new int[128];
-
-        // Attempt to extend the range.
-        int i = 0;
-        for (int j = 0; j < n; j++) {
-            i = Math.max(index[s.charAt(j)], i);
-            ans = Math.max(ans, j - i + 1);
-            index[s.charAt(j)] = j + 1;
-        }
-        return ans;
-    }
-
-    // Code that directly mirrors the video solution
-    public static int lengthOfLongestSubstringAlt(String s) {
       Set<Character> inSubstring = new HashSet<Character>();
 
       int maxLength = 0;
@@ -44,6 +28,23 @@ public class LengthOfLongestSubstring {
       }
 
       return maxLength;
+    }
+
+    // An alternative approach
+    public static int lengthOfLongestSubstringAlt(String s) {
+        int n = s.length(), ans = 0;
+
+        // Current index of character.
+        int[] index = new int[128];
+
+        // Attempt to extend the range.
+        int i = 0;
+        for (int j = 0; j < n; j++) {
+            i = Math.max(index[s.charAt(j)], i);
+            ans = Math.max(ans, j - i + 1);
+            index[s.charAt(j)] = j + 1;
+        }
+        return ans;
     }
 
     // Sample test cases

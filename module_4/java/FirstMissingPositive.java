@@ -10,7 +10,26 @@ import java.util.*;
 
 
 public class FirstMissingPositive {
+
     public static int firstMissingPositive(int[] A) {
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] <= 0 || A[i] > A.length) A[i] = Integer.MAX_VALUE;
+        }
+
+        for (int i = 0; i < A.length; i++) {
+            int abs = Math.abs(A[i]);
+            if (abs <= A.length) A[abs-1] = -Math.abs(A[abs-1]);
+        }
+
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > 0) return i+1;
+        }
+
+        return A.length+1;
+    }
+
+    // Alternate implementation
+    public static int firstMissingPositiveAlt(int[] A) {
         int i = 0;
         while(i < A.length){
             if(A[i] == i+1 || A[i] <= 0 || A[i] > A.length) i++;
@@ -21,7 +40,7 @@ public class FirstMissingPositive {
         while(i < A.length && A[i] == i+1) i++;
         return i+1;
     }
-    
+
     private static void swap(int[] A, int i, int j){
         int temp = A[i];
         A[i] = A[j];
@@ -40,5 +59,5 @@ public class FirstMissingPositive {
 
         System.out.println("Passed all test cases");
     }
-    
+
 }

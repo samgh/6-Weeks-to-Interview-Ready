@@ -1,7 +1,7 @@
 /*
  *   Title: Basic calculator
  *
- *   Problem: 
+ *   Problem:
  *      Implement a basic calculator to evaluate a simple expression
  *      string.
  *
@@ -87,6 +87,51 @@ public class Calculate {
         return evaluateExpr(stack);
     }
 
+    // Using recursion rather than stacks to solve this problem
+    public static int calculateRecursive(String s) {
+        return calculateRecursive(s, 0, s.length());
+    }
+
+    private static int calculateRecursive(String s, int start, int end) {
+        int sum = 0;
+        char currentSign = '+';
+
+        for (int i = start; i < end; i++) {
+            char currentChar = s.charAt(i);
+
+            if (currentChar == ' ') continue;
+
+            if (currentChar == '+' || currentChar == '-') {
+                currentSign = currentChar;
+                continue;
+            }
+
+            int nextValue = 0;
+
+            if (Character.isDigit(currentChar)) nextValue = Integer.parseInt(String.valueOf(currentChar));
+            if (currentChar == '(') {
+                int endParen = getMatchingParen(s, i);
+                nextValue = calculateRecursive(s, i+1, endParen);
+                i = endParen;
+            }
+
+            if (currentSign == '+') sum += nextValue;
+            else sum -= nextValue;
+        }
+
+        return sum;
+    }
+
+    private static int getMatchingParen(String s, int start) {
+        int countOpen = 1;
+        for (int i = start+1; i < s.length(); i++) {
+            if (s.charAt(i) == '(') countOpen++;
+            if (s.charAt(i) == ')') countOpen--;
+            if (countOpen == 0) return i;
+        }
+        return -1;
+    }
+
 
     public static void main(String[] args) {
         assert calculate("1 + 1") == 2;
@@ -95,5 +140,5 @@ public class Calculate {
 
         System.out.println("Passed all test cases");
     }
-    
+
 }

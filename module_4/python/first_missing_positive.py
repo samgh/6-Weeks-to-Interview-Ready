@@ -12,6 +12,23 @@ from typing import List
 
 
 def first_missing_positive(nums: List[int]):
+    for i in range(len(nums)):
+        if nums[i] <= 0 or nums[i] > len(nums):
+            nums[i] = float('inf')
+
+    for i in range(len(nums)):
+        absolute_value = abs(nums[i])
+        if absolute_value <= len(nums):
+            nums[absolute_value-1] = -abs(nums[absolute_value-1])
+
+    for i in range(len(nums)):
+        if nums[i] > 0:
+            return i+1
+
+    return len(nums)+1
+
+# A slightly different implementation
+def first_missing_positive_alt(nums: List[int]):
     """First missing positive position."""
     nums.append(0)
     n = len(nums)
