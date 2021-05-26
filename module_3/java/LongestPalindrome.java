@@ -16,11 +16,11 @@ public class LongestPalindrome {
         int currLength = 0;
         for(int i=0; i<s.length(); i++){
             if(isPalindrome(s, i-currLength-1, i)) {
-                res = s.substring(i-currLength-1, i+1);
+                res = s.substring(i - currLength - 1, currLength + 2);
                 currLength = currLength + 2;
             }
             else if(isPalindrome(s, i-currLength, i)) {
-                res = s.substring(i-currLength, i+1);
+                res = s.substring(i - currLength, currLength + 1);
                 currLength = currLength + 1;
             }
         }
@@ -32,7 +32,7 @@ public class LongestPalindrome {
             return false;
         }
         while(begin < end) {
-        	if(s.charAt(begin++) != s.charAt(end--)) { 
+        	if(s.charAt(begin++) != s.charAt(end--)) {
                 return false;
             }
         }
@@ -40,6 +40,11 @@ public class LongestPalindrome {
     }
 
     public static void main(String[] args) {
+        assert longestPalindrome("a") == "a";
+
+        assert longestPalindrome("ac") == "a";
+        System.out.println("Note: 'c' is also a valid answer");
+
         assert longestPalindrome("babad") == "bab";
         System.out.println("Note: 'aba' is also a valid answer");
 
@@ -47,5 +52,5 @@ public class LongestPalindrome {
 
         System.out.println("Passed all test cases");
     }
-    
+
 }
