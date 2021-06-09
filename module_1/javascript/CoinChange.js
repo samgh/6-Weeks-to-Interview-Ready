@@ -169,6 +169,8 @@ var tester = function() {
     console.assert(coinChangeBU([1,2,5], 11) === 3);
     console.assert(coinChangeBU([2], -3) === -1);
     console.assert(coinChangeBU([1,6,10], 12) === 2);
+
+    // ADD YOUR OWN TESTS HERE
 }
 
 tester();

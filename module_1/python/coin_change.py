@@ -153,6 +153,7 @@ class TestCoinChange(unittest.TestCase):
     def test_3(self):
         self.assertEqual(coin_change_bu(coins=[1,6,10], amount=12), 2)
 
+    # ADD YOUR OWN TESTS HERE
 
 if __name__ == '__main__':
     unittest.main()
