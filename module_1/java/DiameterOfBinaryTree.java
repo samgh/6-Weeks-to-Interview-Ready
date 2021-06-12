@@ -71,6 +71,7 @@ public class DiameterOfBinaryTree {
         return diam;
     }
 
+    // Test cases
     public static void main(String[] args) {
         TreeNode input1 = new TreeNode(1);
         input1.left = new TreeNode(2);
@@ -78,9 +79,8 @@ public class DiameterOfBinaryTree {
         input1.left.left = new TreeNode(4);
         input1.left.right= new TreeNode(5);
 
-        System.out.println(diameterOfBinaryTree(input1));
+        // Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3]
         assert diameterOfBinaryTree(input1) == 3;
-        System.out.println("Explanation: Return 3, which is the length of the path [4,2,1,3] or [5,2,1,3].");
 
         // ADD YOUR OWN TESTS HERE
 
