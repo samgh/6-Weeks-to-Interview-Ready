@@ -20,7 +20,7 @@
  *   Output:
  *      boolean             => True if and only if graph is bipartite
  *
- *   Execution: javac IsBipartite.java && java IsBipartite
+ *   Execution: javac IsBipartite.java && java -ea IsBipartite
  */
 
 import java.util.*;
