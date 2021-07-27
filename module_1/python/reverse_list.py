@@ -1,26 +1,65 @@
 """
-Title: Reverse linked list.
+Title: Longest Substring Without Repeating Characters
+Leetcode Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
-Problem: Reverse a singly linked list.
+Problem: Given a string, find the length of the longest substring without
+repeating characters.
 
+Input:
+  string: s    => String in which to find substring
+Output:
+  int          => Length of longest substring
 Execution: python reverse_list.py
 """
 import unittest
 
-
+# Basic node class
 class ListNode:
-    """Basic node class for linked list."""
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
 
-    def __init__(self, x):
-        self.val = x
-        self.next = None
+"""
+Solution #1: Brute Force
 
+In this solution, we add all the nodes to an builtin list, allowing us to easily
+maintain order while swapping pointers.
 
-def reverse_list_iterative(head: ListNode) -> ListNode:
-    """Function for iteratively reversing singly linked list."""
+This is not recommended and for demonstrative purposes only.
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+"""
+def reverse_list_bf(head: ListNode) -> ListNode:
+    if not head:
+        return head
+    # Create an list that contains references to all the list nodes
+    nodes = []
+    curr = head
+    while curr:
+        nodes.append(curr)
+        curr = curr.next
+
+    # Reverse pointers
+    nodes[0].next = None
+    for i in range(1, len(nodes)):
+        nodes[i].next = nodes[i-1]
+
+    return nodes[-1]
+
+"""
+Solution #2: Iterative
+
+Iterate over all the nodes and reverse pointers as we go
+
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
+def reverse_list_iter(head: ListNode) -> ListNode:
     prev = None
     curr = head
 
+    # Iterate over the list and swap pointers as we go
     while curr:
         next_temp = curr.next
         curr.next = prev
@@ -28,25 +67,27 @@ def reverse_list_iterative(head: ListNode) -> ListNode:
         curr = next_temp
     return prev
 
+"""
+Solution #3: Recursive
 
-def reverse_list_recursive(head: ListNode) -> ListNode:
-    """Function for recursively reversing singly linked list."""
+Recursively reverse the remainder of the list and point current node to the
+previous
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+"""
+def reverse_list_rec(head: ListNode) -> ListNode:
+    # If we're at the end of the list, just return head
     if head is None or head.next is None:
         return head
-    p = reverse_list_recursive(head.next)
+
+    # Reverse the list from head.next to the end
+    rem = reverse_list_rec(head.next)
+
+    # Point the last node of that reversed list to the current node
     head.next.next = head
     head.next = None
-    return p
-
-
-def print_list(head: ListNode) -> list:
-    """Print linked list elements."""
-    output_list = []
-    while head:
-        output_list.append(head.val)
-        head = head.next
-    return output_list
-
+    return rem
 
 class TestReverseList(unittest.TestCase):
     """Unit test for reverse list."""
@@ -59,9 +100,15 @@ class TestReverseList(unittest.TestCase):
         input_1.next.next.next = ListNode(4)
         input_1.next.next.next.next = ListNode(5)
 
-        list_output_iterative_1 = print_list(reverse_list_iterative(input_1))
-        self.assertEqual(list_output_iterative_1, [5, 4, 3, 2, 1])
+        output_1 = reverse_list_rec(input_1)
+        l = []
+        while output_1:
+            l.append(output_1.val)
+            output_1 = output_1.next
 
+        self.assertEqual(l, [5, 4, 3, 2, 1])
+
+    # ADD YOUR TESTS HERE
 
 if __name__ == '__main__':
     unittest.main()
