@@ -1,40 +1,67 @@
 /*
- *   Title: Stack from queue.
+ *   Title: Stack from Queues
+ *   Leetcode Link: https://leetcode.com/problems/implement-stack-using-queues/
  *
- *   Problem: Implement a stack with push and pop
- *   operations using a queue data structure.
+ *   Problem: Implement a LIFO stack with basic operations using 2 FIFO queues.
  *
- *   Execution: javac StackFromQueue.java && java StackFromQueue
+ *   Execution: javac StackFromQueue.java && java -ea StackFromQueue
  */
-import java.util.*; 
-  
-class StackFromQueue {  
-    static Queue<Integer> queue = new LinkedList<Integer>();
-    
-    public static void push(int value) {
-        int qSize = queue.size();
-        queue.add(value);
+import java.util.*;
 
-        for (int i = 0; i < qSize; i++) {
-            queue.add(queue.remove());
-        }
+class StackFromQueue {
+
+    private Queue<Integer> queue;
+
+    // Constructor
+    public StackFromQueue() {
+        this.queue = new LinkedList<>();
     }
 
-    public static void pop() {
-        System.out.println("Element removed from stack is:" + queue.remove());
+    // Push an item onto the stack
+    public void push(int x) {
+        // We are going to just create a new queue here so we're using 2 queues
+        // _at a time_. If we want to be more precise, we could allocate two
+        // queues at the beginning and just alternate between which we're using
+        // as the primary and secondary queues
+        Queue<Integer> newQueue = new LinkedList<>();
+
+        // Maintain our queue in stack order. To add an item to the end of the
+        // queue we add that first before everything else
+        newQueue.add(x);
+        for (int i : queue) newQueue.add(i);
+
+        // newQueue now contains all elements in proper order
+        this.queue = newQueue;
     }
-      
-    // Driver code  
-    public static void main(String[] args) {  
+
+    // Remove the most recently added element from the stack
+    public int pop() {
+        // We've handled all the logic while pushing so this is easy
+        return this.queue.remove();
+    }
+
+    // Return the top element of stack without removing it
+    public int top() {
+        return this.queue.peek();
+    }
+
+    // Return true if stack is empty
+    public boolean empty() {
+        return this.queue.size() == 0;
+    }
+
+    // Driver code
+    public static void main(String[] args) {
         StackFromQueue stackFromQueue = new StackFromQueue();
         stackFromQueue.push(1);
         stackFromQueue.push(2);
         stackFromQueue.push(3);
         stackFromQueue.push(4);
- 
+
         System.out.println(stackFromQueue.queue);
         stackFromQueue.pop();
         System.out.println(stackFromQueue.queue);
-    }  
-}  
 
+        // ADD YOUR TEST CASES HERE
+    }
+}
