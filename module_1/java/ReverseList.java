@@ -7,7 +7,7 @@
  *   Input:
  *      ListNode head   => The head of the linked list
  *   Output:
- *      ListNode head   => The head of the reversed list
+ *      ListNode        => The head of the reversed list
  *
  *   Execution: javac ReverseList.java && java -ea ReverseList
  */

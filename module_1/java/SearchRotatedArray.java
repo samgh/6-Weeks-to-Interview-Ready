@@ -1,71 +1,79 @@
 /*
- *   Title: Search rotated array.
+ *   Title: Search In Rotated Array
+ *   Leetcode Link: https://leetcode.com/problems/search-in-rotated-sorted-array/
  *
- *   Problem:
- *   Suppose an array sorted in ascending order is rotated at some pivot
- *   unknown to you beforehand.
+ *   Problem: Given a a sorted array that is rotated around some unknown pivot
+ *   point, write a function to find the index of a target value.
+ *   (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2])
  *
- * (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
- * 
- * You are given a target value to search. If found in the array return its index,
- * otherwise return -1.
- * 
- * You may assume no duplicate exists in the array.
+ *   You can assume the array contains no duplicates.
  *
- * Your algorithm's runtime complexity must be in the order of O(log n).
+ *   Input:
+ *      int[] arr   => The array to search in
+ *      int target  => The value to search for
+ *   Output:
+ *      int         => The index of target. Return -1 if not found
  *
- *   Execution: javac SearchRotatedArray.java && java SearchRotatedArray
+ *   Execution: javac SearchRotatedArray.java && java -ea SearchRotatedArray
  */
 
-
 public class SearchRotatedArray {
-    public static int searchRotatedArray(int A[], int n, int target) {
+
+    /*
+     * Perform a modified binary search. In addition to considering whether the
+     * value is to the left or the right of the midpoint, we also have to
+     * consider whether the pivot point is to the left or righ.
+     *
+     * Time Complexity: O(log n)
+     * Space Complexity: O(1)
+     */
+    public static int searchRotatedArray(int[] arr, int target) {
+        // The bounds of our current subarray
         int low = 0;
-        int high = n-1;
-        // Find the index of the smallest value using binary search.
-        // Loop will terminate since mid < hi, and low or high 
-        // will shrink by at least 1.
-        
-        // Proof by contradiction that mid < high: if mid==high, 
-        // then low == high and loop would have been terminated.
-        while(low < high){
+        int high = arr.length-1;
+
+        // Keep dividing subarray in half until we either find the value we're
+        // looking for or the subarray length is 0 (aka low >= high)
+        while (low <= high) {
+            // The midpoint of our subarray
             int mid = (low + high)/2;
-            if(A[mid] > A[high]){
-                low = mid+1;
-            }
-            else {
-                high = mid;
+
+            // If we've found the value, return the index
+            if (target == arr[mid]) return mid;
+
+            // If the target < arr[mid], we have 3 possible options:
+            // 1. Left subarray contains pivot. This means all values lower than
+            // arr[mid] are in the left subarray
+            // 2. target >= arr[low]. This means target is in left subarray
+            // 3. target < arr[low]. This means there could be a pivot in the
+            // right subarray so if our target is in the array it must be there
+            if (target < arr[mid]) {
+                // A subarray must contain pivot if arr[low] > arr[high]
+                if (arr[low] > arr[mid] || target >= arr[low]) {
+                    high = mid-1;
+                } else {
+                    low = mid+1;
+                }
+            } else {
+                // If target > arr[mid] we just do the opposite of above
+                if (arr[mid] > arr[high] || target <= arr[high]) {
+                    low = mid+1;
+                } else {
+                    high = mid-1;
+                }
             }
         }
-        // low = high is the index of the smallest value 
-        // and also the number of places rotated.
-        int rot = low;
-        low = 0;
-        high = n-1;
-        // The usual binary search and accounting for rotation.
-        while(low <= high){
-            int mid = (low + high)/2;
-            int realmid=(mid + rot) % n;
-            if(A[realmid] == target){
-                return realmid;
-            }
-            if(A[realmid] < target){
-                low = mid+1;
-            }
-            else {
-                high = mid-1;
-            }
-        }
+
         return -1;
     }
-    public static void main(String[] args) {
-        int[] testInputArray1 = {4,5,6,7,0,1,2};
-        assert searchRotatedArray(testInputArray1, 7, 0) == 4;
 
-        int[] testInputArray2 = {4,5,6,7,0,1,2};
-        assert searchRotatedArray(testInputArray2, 7, 3) == -1;
+    public static void main(String[] args) {
+        assert searchRotatedArray(new int[]{4,5,6,7,0,1,2}, 0) == 4;
+        assert searchRotatedArray(new int[]{4,5,6,7,0,1,2}, 3) == -1;
+
+        // ADD YOUR TESTCASES HERE
 
         System.out.println("Passed all test cases");
     }
-    
+
 }

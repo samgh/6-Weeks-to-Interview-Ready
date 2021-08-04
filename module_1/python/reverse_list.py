@@ -1,14 +1,14 @@
 """
-Title: Longest Substring Without Repeating Characters
-Leetcode Link: https://leetcode.com/problems/longest-substring-without-repeating-characters/
+Title: Reverse Linked List
+Leetcode Link: https://leetcode.com/problems/reverse-linked-list/
 
-Problem: Given a string, find the length of the longest substring without
-repeating characters.
+Problem: Given a singly linked list, reverse the list.
 
 Input:
-  string: s    => String in which to find substring
+    ListNode head   => The head of the linked list
 Output:
-  int          => Length of longest substring
+    ListNode        => The head of the reversed list
+
 Execution: python reverse_list.py
 """
 import unittest
