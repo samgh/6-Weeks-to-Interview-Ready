@@ -1,80 +1,122 @@
 /*
- *   Title: Climb stairs
+ *   Title: Climb Stairs
+ *   Leetcode Link: https://leetcode.com/problems/climbing-stairs/
  *
- *   Problem:
- *   You are climbing a stair case. It takes n steps to reach to the
- *   top.
+ *   Problem: Given a staircase with n steps, determine the number of different
+ *   ways you can climb to the top. You can step up 1 or 2 steps at a time.
  *
- *   Each time you can either climb 1 or 2 steps. In how many distinct ways can you
- *   climb to the top?
- * 
- *   Note: Given n will be a positive integer.
+ *   Input:
+ *      int n   => Total number of steps
+ *   Output:
+ *      int     -> Total number of unique ways to climb the stairs
  *
- *   Execution: javac ClimbStairs.java && java ClimbStairs
+ *   Execution: javac ClimbStairs.java && java -ea ClimbStairs
  */
 
-
 public class ClimbStairs {
+
+    /*
+     * Solution #1: Brute force recursive
+     *
+     * Recursively expand every possible combination of steps. At each step, we
+     * can either step up one step or two. Recursively try both possibilites to
+     * count the different options.
+     *
+     * Time Complexity: O(2^n)
+     * Space Complexity: O(n)
+     */
     public static int climbStairsBF(int n) {
-        /* Brute-force implementation of climb stairs.*/
-        return climbStairsBF(0, n);
-    }
-    public static int climbStairsBF(int i, int n) {
-        if (i > n) {
-            return 0;
-        }
-        if (i == n) {
-            return 1;
-        }
-        return climbStairsBF(i + 1, n) + climbStairsBF(i + 2, n);
-    }
-    public static int climbStairsRec(int n) {
-        /* Recursion with memoizaition.*/
-        int memo[] = new int[n + 1];
-        return climbStairsRec(0, n, memo);
-    }
-    public static int climbStairsRec(int i, int n, int memo[]) {
-        if (i > n) {
-            return 0;
-        }
-        if (i == n) {
-            return 1;
-        }
-        if (memo[i] > 0) {
-            return memo[i];
-        }
-        memo[i] = climbStairsRec(i + 1, n, memo) + climbStairsRec(i + 2, n, memo);
-        return memo[i];
+        // Base case. n is the number of steps remaining to the top. If n == 0,
+        // then we are at the top of the stairs, so there is exactly 1 way to
+        // get to the top of the stairs (aka do nothing)
+        if (n == 0) return 1;
+
+        // Base case. If n < 0 then we found an invalid path, so there are no
+        // ways to get to the top of the stairs
+        if (n < 0) return 0;
+
+        // If we take a single step, how many combinations are there to get the
+        // rest of the way to the top?
+        int oneStep = climbStairsBF(n-1);
+
+        // If we take 2 steps, how many combinations are there?
+        int twoSteps = climbStairsBF(n-2);
+
+        // We can take one step or two so all of these are unique valid paths
+        return oneStep + twoSteps;
     }
 
-    public static int climbStairsDP(int n) {
-        /* Dynamic programming implementation.*/ 
-        if (n == 1) {
-            return 1;
-        }
+    /*
+     * Solution #2: Top-down DP
+     *
+     * We can take the brute force solution and cache the values that have
+     * been computed to avoid solving the same subproblem multiple times
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+    public static int climbStairsTD(int n) {
         int[] dp = new int[n + 1];
+        return climbStairsTD(n, dp);
+    }
+    private static int climbStairsTD(int n, int[] dp) {
+        // Base case. n is the number of steps remaining to the top. If n == 0,
+        // then we are at the top of the stairs, so there is exactly 1 way to
+        // get to the top of the stairs (aka do nothing)
+        if (n == 0) return 1;
+
+        // Base case. If n < 0 then we found an invalid path, so there are no
+        // ways to get to the top of the stairs
+        if (n < 0) return 0;
+
+        // Check whether we've already computed the value. If not, we need to
+        // compute it
+        if (dp[n] == 0) {
+            // Compute the result and add it to dp array
+            dp[n] = climbStairsTD(n-1, dp) + climbStairsTD(n-2, dp);
+        }
+
+        // Now that we've computed and saved the value if necessary, return it
+        return dp[n];
+    }
+
+    /*
+     * Solution #3: Bottom-up DP
+     *
+     * This is basically the opposite of the top-down approach. Rather than
+     * recursively solving smaller and smaller subproblems, we start with the
+     * smallest subproblems and iteratively solve bigger and bigger subproblems
+     *
+     * Time Complexity: O(n)
+     * Space Complexity: O(n)
+     */
+    public static int climbStairsBU(int n) {
+        if (n == 1) return 1;
+
+        // Construct our dp array. We ultimately want to solve for and return
+        // dp[n], so the length must be n+1
+        int[] dp = new int[n + 1];
+
+        // Our base cases. We do both 0 and 1 so we don't have to worry about
+        // bounds checking when referencing dp[i-1] and dp[i-2]
+        dp[0] = 1;
         dp[1] = 1;
-        dp[2] = 2;
-        for (int i = 3; i <= n; i++) {
+
+        for (int i = 2; i < dp.length; i++) {
+            // We've already solved the smaller subproblems. This is the same as
+            // making our recursive calls in the recursive solutions
             dp[i] = dp[i - 1] + dp[i - 2];
         }
+
         return dp[n];
     }
 
     public static void main(String[] args) {
-        assert climbStairsBF(2) == 2;
-        System.out.println("Brute-force implementation:");
-        System.out.println("There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps");
+        assert climbStairsBF(5) == 8;
+        assert climbStairsTD(5) == 8;
+        assert climbStairsBU(5) == 8;
 
-        assert climbStairsRec(2) == 2;
-        System.out.println("Recursive implementation:");
-        System.out.println("There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps");
-
-        assert climbStairsDP(2) == 2;
-        System.out.println("Dynamic programming implementation:");
-        System.out.println("There are two ways to climb to the top. 1. 1 step + 1 step 2. 2 steps");
-
+        // ADD YOUR TEST CASES HERE
         System.out.println("Passed all test cases");
     }
-    
 }

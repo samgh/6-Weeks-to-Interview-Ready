@@ -1,72 +1,126 @@
 """
-Title:
+Title: Climb Stairs
+Leetcode Link: https://leetcode.com/problems/climbing-stairs/
 
-Problem:You are climbing a stair case. It takes n steps to reach to the top. 
+Problem: Given a staircase with n steps, determine the number of different
+ways you can climb to the top. You can step up 1 or 2 steps at a time.
 
-        Each time you can either climb 1 or 2 steps. In how many distinct ways can you
-        climb to the top?
-
-        Note: Given n will be a positive integer.
+Input:
+    int n   => Total number of steps
+Output:
+    int     -> Total number of unique ways to climb the stairs
 
 Execution: python climb_stairs.py
 """
 import unittest
 
+"""
+Solution #1: Brute force recursive
 
-class ClimbStairsBruteForce:
-    """Brute-force implementation of climb stairs problem."""
-    def climb_stairs(self, n: int):
-        return self.climb_stairs_recur(0, n)
+Recursively expand every possible combination of steps. At each step, we
+can either step up one step or two. Recursively try both possibilites to
+count the different options.
 
-    def climb_stairs_recur(self, i: int, n: int):
-        if i > n:
-            return 0
-        if i == n:
-            return 1
-        return self.climb_stairs_recur(i + 1, n) + \
-            self.climb_stairs_recur(i + 2, n)
+Time Complexity: O(2^n)
+Space Complexity: O(n)
+"""
+def climb_stairs_bf(n: int)->int:
+    # Base case. n is the number of steps remaining to the top. If n == 0,
+    # then we are at the top of the stairs, so there is exactly 1 way to
+    # get to the top of the stairs (aka do nothing)
+    if n == 0:
+        return 1
+
+    # Base case. If n < 0 then we found an invalid path, so there are no
+    # ways to get to the top of the stairs
+    if n < 0:
+        return 0
+
+    # If we take a single step, how many combinations are there to get the
+    # rest of the way to the top?
+    one_step = climb_stairs_bf(n-1)
+
+    # If we take 2 steps, how many combinations are there?
+    two_steps = climb_stairs_bf(n-2)
+
+    # We can take one step or two so all of these are unique valid paths
+    return one_step + two_steps
+
+"""
+Solution #2: Top-down DP
+
+We can take the brute force solution and cache the values that have
+been computed to avoid solving the same subproblem multiple times
+
+Time Complexity: O(n)
+Space Complexity: O(n)
+"""
+def climb_stairs_td(n: int, dp: dict={})->int:
+    # Base case. n is the number of steps remaining to the top. If n == 0,
+    # then we are at the top of the stairs, so there is exactly 1 way to
+    # get to the top of the stairs (aka do nothing)
+    if n == 0:
+        return 1
+
+    # Base case. If n < 0 then we found an invalid path, so there are no
+    # ways to get to the top of the stairs
+    if n < 0:
+        return 0
+
+    # Check whether we've already computed the value. If not, we need to
+    # compute it
+    if not n in dp:
+        # Compute the result and add it to dp array
+        dp[n] = climb_stairs_td(n-1, dp) + climb_stairs_td(n-2, dp);
+
+    # Now that we've computed and saved the value if necessary, return it
+    return dp[n];
 
 
-class ClimbStairsDP:
-    """Dynamic programming implementation of climb stairs problem."""
-    def climb_stairs(self, n: int):
-        if n == 1:
-            return 1
+"""
+Solution #3: Bottom-up DP
 
-        dp = [0] * (n + 1)
-        dp[1] = 1
-        dp[2] = 2
-        for i in range(3, n+1):
-            dp[i] = dp[i - 1] + dp[i - 2]
-        return dp[n]
+This is basically the opposite of the top-down approach. Rather than
+recursively solving smaller and smaller subproblems, we start with the
+smallest subproblems and iteratively solve bigger and bigger subproblems
 
+Time Complexity: O(n)
+Space Complexity: O(n)
+"""
+def climb_stairs_bu(n: int)->int:
+    if n == 1:
+        return 1;
+
+    # Construct our dp list. We ultimately want to solve for and return
+    # dp[n], so the length must be n+1
+    dp = [0]*(n+1);
+
+    # Our base cases. We do both 0 and 1 so we don't have to worry about
+    # bounds checking when referencing dp[i-1] and dp[i-2]
+    dp[0] = 1;
+    dp[1] = 1;
+
+    for i in range(2, len(dp)):
+        # We've already solved the smaller subproblems. This is the same as
+        # making our recursive calls in the recursive solutions
+        dp[i] = dp[i - 1] + dp[i - 2];
+
+    return dp[n];
 
 class TestClimbStairs(unittest.TestCase):
     """Unit test for climb stairs function."""
 
     def test_1(self):
-        bf = ClimbStairsBruteForce()
-        dp = ClimbStairsDP()
-
-        self.assertEqual(bf.climb_stairs(2), 2)
-        self.assertEqual(dp.climb_stairs(2), 2)
-
-        print("Explanation: There are two ways to climb to the top:")
-        print("1. 1 step + 1 step.")
-        print("2. 2 steps")
+        self.assertEqual(climb_stairs_bf(2), 2)
+        self.assertEqual(climb_stairs_td(2), 2)
+        self.assertEqual(climb_stairs_bu(2), 2)
 
     def test_2(self):
-        bf = ClimbStairsBruteForce()
-        dp = ClimbStairsDP()
+        self.assertEqual(climb_stairs_bf(5), 8)
+        self.assertEqual(climb_stairs_td(5), 8)
+        self.assertEqual(climb_stairs_bu(5), 8)
 
-        self.assertEqual(bf.climb_stairs(3), 3)
-        self.assertEqual(dp.climb_stairs(3), 3)
-
-        print("Explanation: There are three ways to climb to the top.")
-        print("1. 1 step + 1 step + 1 step.")
-        print("2. 1 step + 2 steps.")
-        print("3. 2 steps + 1 step.")
-
+    # ADD YOUR TESTS HERE
 
 if __name__ == '__main__':
     unittest.main()

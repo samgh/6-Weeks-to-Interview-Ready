@@ -76,7 +76,7 @@ var coinChangeTD = function(coins, amount) {
     // Initialize dp array to size amount+1
     var dp = [];
     var arraySize = amount+1;
-    while(arraySize--) dp.push(0);
+    while (arraySize--) dp.push(0);
 
     return coinChangeTDInner(coins, amount, dp);
 }
