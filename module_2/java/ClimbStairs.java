@@ -56,7 +56,10 @@ public class ClimbStairs {
      * Space Complexity: O(n)
      */
     public static int climbStairsTD(int n) {
+        // Initialize dp array to size n+1. We need to be able to store dp[n] so
+        // we need to ensure the array is big enough
         int[] dp = new int[n + 1];
+
         return climbStairsTD(n, dp);
     }
     private static int climbStairsTD(int n, int[] dp) {

@@ -1,78 +1,95 @@
 """
-Title: Does linked list have cycle.
+Title: Has Cycle
+Leetcode Link: https://leetcode.com/problems/linked-list-cycle/
 
-Problem:
-        Given a linked list, determine if it has a cycle in it.
+Problem: Given a linked list, determine if it contains a cycle.
 
-        To represent a cycle in the given linked list, we use an integer pos which
-        represents the position (0-indexed) in the linked list where tail connects to.
-        If pos is -1, then there is no cycle in the linked list.
+Input:
+  Node n  => List head
+Output:
+  bool => True if the list contains a cycle
 
 Execution: python has_cycle.py
 """
 import unittest
 
-
+"""
+Simple Node class
+"""
 class Node:
-    """Node class for LinkedList."""
-
-    def __init__(self, data):
-        """Set the data for node."""
+    def __init__(self, data = None):
         self.data = data
         self.next = None
 
+"""
+Solution #1: Using extra memory
 
-class LinkedList:
-    """Linked list class."""
+We'll store all the nodes into a set. Then for each node we visit
+we check whether we've already visited that node.
 
-    def __init__(self): 
-        """Initialize head of list."""
-        self.head = None
+Time Complexity: O(n)
+Space Complexity: O(n)
+"""
+def has_cycle_extra_space(n: Node) -> bool:
+    # Set to store nodes we've already visited
+    visited = set()
 
-    def append(self, new_data): 
-        """Insert a new node at the beginning."""
-        new_node = Node(new_data)
-        new_node.next = self.head
-        self.head = new_node
+    # Keep looping until we get to the end of the list or see a node
+    # we've already seen
+    while n:
+        if n in visited:
+            return True
+        visited.add(n)
+        n = n.next
 
-    def print_list(self):
-        """Print the linked LinkedList."""
-        temp = self.head
-        while(temp):
-            print(temp.data)
-            temp = temp.next
+    # If we get here it means we reached the end of the list (no cycle)
+    return False
 
-    def detect_loop(self):
-        """Check if LinkedList has loop."""
-        s = set()
-        temp = self.head
-        while (temp):
-            # If we have already has this node in hashmap it
-            # means their is a cycle (Because you we encountering
-            # the node second time).
-            if (temp in s):
-                return True
+"""
+Solution #2: No extra memory
 
-            # If we are seeing the node for
-            # the first time, insert it in hash
-            s.add(temp)
-            temp = temp.next
+In this algorithm we use 2 pointers moving at different speeds. If there
+is a cycle, the fast pointer should catch up to the slow pointer.
+Otherwise, if the fast pointer reaches the end, there's no cycle
 
+Time Complexity: O(n)
+Space Complexity: O(1)
+"""
+def has_cycle(n: Node) -> bool:
+    if not n:
         return False
+
+    fast = n.next
+    slow = n
+
+    # Keep looping through and check if the fast and slow pointers overlap
+    while fast and fast.next:
+        if fast == slow:
+            return True
+
+        # Fast pointer moves 2x each loop, slow moves 1x
+        fast = fast.next.next
+        slow = slow.next
+
+    return False
+
 
 
 class TestHasCycle(unittest.TestCase):
     """Unit test for has cycle function."""
 
     def test_1(self):
-        ll = LinkedList()
-        ll.append(20)
-        ll.append(4)
-        ll.append(15)
-        ll.append(10)
-        ll.head.next.next.next.next = ll.head
-        self.assertEqual(ll.detect_loop(), True)
+        list = Node()
+        list.next = Node()
+        list.next.next = Node()
 
+        self.assertEqual(has_cycle(list), False)
+
+        list.next.next.next = list
+
+        self.assertEqual(has_cycle(list), True)
+
+    # ADD YOUR TESTS HERE
 
 if __name__ == '__main__':
     unittest.main()
